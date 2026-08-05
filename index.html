@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya Ranjan Chaki | Full-Stack & Systems Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-primary: #c9d1d9;
+            --text-heading: #f0f6fc;
+            --accent-color: #58a6ff;
+            --accent-green: #238636;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 0 auto 4rem auto;
+            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-heading);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2.section-title {
+            color: var(--text-heading);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+
+        .badge {
+            background-color: rgba(88, 166, 255, 0.15);
+            color: var(--accent-color);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .badge.npm {
+            background-color: rgba(35, 134, 54, 0.2);
+            color: #3fb950;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            color: var(--text-primary);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2ea043;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-heading);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--border-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Priya Ranjan Chaki</h1>
+        <p>Full-Stack Software Engineer & Systems Developer</p>
+        <span style="color: #8b949e; font-size: 0.95rem;">Computer Science & Engineering Student at MAKAUT</span>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects-grid">
+            
+            <!-- Project 1: CLI Scaffolder -->
+            <div class="project-card">
+                <div>
+                    <div class="project-header">
+                        <span class="project-title">Nexus CLI Scaffolder</span>
+                        <span class="badge npm">Live on npm</span>
+                    </div>
+                    <p class="project-desc">
+                        A production-grade, multi-stack command-line tool designed to instantly scaffold secure Node.js/MERN or C-language architectures with automated Git version control, dependency health checks, and dry-run testing modes.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Inquirer.js</span>
+                        <span class="tech-tag">DevSecOps</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <!-- Replace with your actual npm package URL -->
+                    <a href="https://www.npmjs.com/package/@glitchedranjan/nexus-cli" target="_blank" class="btn btn-primary">View on npm</a>
+                    <!-- Replace with your GitHub repository URL for the CLI -->
+                    
+                </div>
+            </div>
+
+            <!-- Project 2: Collaborative Workspace -->
+            <div class="project-card">
+                <div>
+                    <div class="project-header">
+                        <span class="project-title">Nexus Collaborative Workspace</span>
+                        <span class="badge">Full-Stack</span>
+                    </div>
+                    <p class="project-desc">
+                        A real-time communication platform featuring WebSockets (Socket.io) for live event broadcasting, MongoDB-backed chat history hydration, IP-address access controls, and a modern Glassmorphism UI.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <!-- Replace with your live web app URL (e.g., Render, Vercel, or Railway) -->
+                    <a href="https://nexus-real-time-developer-workspace.onrender.com" target="_blank" class="btn btn-primary">Live Demo</a>
+                    <!-- Replace with your GitHub repository URL for the workspace -->
+                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/-Nexus-Real-Time-Developer-Workspace.git" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+                </div>
+            </div>
+
+            <!-- Project 3: College Management Portal -->
+            <div class="project-card">
+                <div>
+                    <div class="project-header">
+                        <span class="project-title">College Management Portal</span>
+                        <span class="badge">Academic Portal</span>
+                    </div>
+                    <p class="project-desc">
+                        An institutional web platform tailored for tracking student attendance, managing digital assignment workflows, publishing centralized announcements, and handling role-based user authentication.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">Database Architecture</span>
+                        <span class="tech-tag">MVC</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <!-- Replace with your GitHub repository URL for the college portal -->
+		    <a href="https://collage-portal-ohc0.onrender.com" target="_blank" class="btn btn-primary">Live Demo</a>
+                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/frontend.git" target="_blank" class="btn btn-primary">Frontend GitHub Repo</a>
+	  	    <a href="https://github.com/PRIYA-RANJAN-CHAKI/backend.git" target="_blank" class="btn btn-primary">Backend GitHub Repo</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Priya Ranjan Chaki. Built with precision and clean architecture.</p>
+    </footer>
+
+</body>
+</html>
