@@ -197,7 +197,7 @@
                     Computer Science & Engineering student engineering high-performance web systems, decentralized tools, and secure backend architectures.
                 </p>
                 <div class="flex flex-wrap items-center gap-4 font-mono text-sm">
-                    <a href="#projects" class="px-6 py-3 bg-matrix-950 border border-matrix-500/60 text-matrix-400 rounded-lg hover:bg-matrix-900/40 hover:border-matrix-400 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-matrix-950/50 group">
+                    <a href="#portals" class="px-6 py-3 bg-matrix-950 border border-matrix-500/60 text-matrix-400 rounded-lg hover:bg-matrix-900/40 hover:border-matrix-400 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-matrix-950/50 group">
                         <span class="group-hover:translate-x-0.5 transition-transform">⚡</span> Explore Deployments
                     </a>
                     <a href="#contact" class="px-6 py-3 bg-cyber-dark border border-cyan-500/40 text-cyan-400 rounded-lg hover:bg-cyan-950/30 hover:border-cyan-400 transition-all duration-300 flex items-center gap-2 group">
@@ -261,285 +261,266 @@
 
         </div>
 
-        <!-- Featured Projects -->
-        <section id="projects" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
+        <!-- Active Portals & Access Nodes (Detailed Project Showcase) -->
+        <section id="portals" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
                 <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
-                    <span class="text-matrix-400">#</span> Selected Deployments
+                    <span class="text-cyan-400">#</span> Active Portals & Access Nodes
                 </h2>
-                <!-- Filter Buttons -->
-                <div class="flex flex-wrap gap-2 font-mono text-xs">
-                    <button onclick="filterProjects('all')" class="px-3 py-1 bg-matrix-950 border border-matrix-500/50 text-matrix-400 rounded hover:bg-matrix-900/40 transition-colors filter-btn active" data-filter="all">All</button>
-                    <button onclick="filterProjects('fullstack')" class="px-3 py-1 bg-slate-900 border border-cyber-border text-slate-400 rounded hover:text-cyan-400 transition-colors filter-btn" data-filter="fullstack">Fullstack</button>
-                    <button onclick="filterProjects('cli')" class="px-3 py-1 bg-slate-900 border border-cyber-border text-slate-400 rounded hover:text-cyan-400 transition-colors filter-btn" data-filter="cli">Tools / CLI</button>
-                    <button onclick="filterProjects('frontend')" class="px-3 py-1 bg-slate-900 border border-cyber-border text-slate-400 rounded hover:text-cyan-400 transition-colors filter-btn" data-filter="frontend">Frontend</button>
-                </div>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">SYSTEM_SHOWCASE</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects-grid">
+            <div class="space-y-8">
                 
-                <!-- Project 1: College Management Portal -->
-                <div class="project-card bg-cyber-dark/60 border border-cyber-border rounded-lg p-6 flex flex-col justify-between hover:border-matrix-500 transition-all duration-300 group shadow-lg" data-category="fullstack">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-mono text-base font-semibold text-slate-200 group-hover:text-matrix-400 transition-colors">College Management Portal</h3>
-                            <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-matrix-950 text-matrix-400 border border-matrix-500/30">V1.0</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
-                            Full-stack web architecture handling secure automated attendance processing, centralized assignment lifecycles, and protected institute notice broadcasts.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] mb-6">
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Express</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
-                        </div>
+                <!-- PORTAL 01: College Management Portal -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
+                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="College Portal UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LIVE_FEED_01</div>
                     </div>
-                    <div class="flex flex-wrap items-center gap-2 font-mono text-xs pt-4 border-t border-cyber-border">
-                        <a href="https://collage-portal-ohc0.onrender.com/" target="_blank" class="flex-1 min-w-[90px] py-2 text-center bg-matrix-950/80 border border-matrix-500/50 text-matrix-400 rounded hover:bg-matrix-900/60 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>▶</span> Live Demo
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/frontend" target="_blank" class="py-2 px-3 text-center bg-slate-900 border border-slate-700/50 text-slate-300 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1">
-                            <span>⚡</span> Frontend
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/backend" target="_blank" class="py-2 px-3 text-center bg-slate-900 border border-slate-700/50 text-slate-300 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1">
-                            <span>⚡</span> Backend
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2: Nexus CLI Scaffolder -->
-                <div class="project-card bg-cyber-dark/60 border border-cyber-border rounded-lg p-6 flex flex-col justify-between hover:border-cyan-500 transition-all duration-300 group shadow-lg" data-category="cli">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-mono text-base font-semibold text-slate-200 group-hover:text-cyan-400 transition-colors">Nexus CLI Scaffolder</h3>
-                            <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">NPM PACKAGE</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
-                            A time-saving tool for developers that instantly sets up project architecture, configures folder structures, and streamlines local workspace setups.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] mb-6">
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">JavaScript</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">CLI Tool</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 font-mono text-xs pt-4 border-t border-cyber-border">
-                        <a href="https://www.npmjs.com/package/@glitchedranjan/nexus-cli" target="_blank" class="flex-1 py-2 text-center bg-cyan-950/60 border border-cyan-500/40 text-cyan-400 rounded hover:bg-cyan-900/40 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>▶</span> View on npm
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/-Nexus-Real-Time-Developer-Workspace" target="_blank" class="flex-1 py-2 text-center bg-slate-900 border border-slate-700/50 text-slate-300 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1.5">
-                            <span>⚡</span> Git Repo
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: Nexus Collaborative Workspace -->
-                <div class="project-card bg-cyber-dark/60 border border-cyber-border rounded-lg p-6 flex flex-col justify-between hover:border-matrix-500 transition-all duration-300 group shadow-lg" data-category="fullstack">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-mono text-base font-semibold text-slate-200 group-hover:text-matrix-400 transition-colors">Nexus Collaborative Workspace</h3>
-                            <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-matrix-950 text-matrix-400 border border-matrix-500/30">REAL-TIME</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
-                            A live workspace app enabling seamless team chat and communication with secure session management and reliable history storage.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] mb-6">
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Express</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 font-mono text-xs pt-4 border-t border-cyber-border">
-                        <a href="https://nexus-real-time-developer-workspace.onrender.com/" target="_blank" class="flex-1 py-2 text-center bg-matrix-950/80 border border-matrix-500/50 text-matrix-400 rounded hover:bg-matrix-900/60 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>▶</span> Live Demo
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/-Nexus-Real-Time-Developer-Workspace" target="_blank" class="flex-1 py-2 text-center bg-slate-900 border border-slate-700/50 text-slate-300 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1.5">
-                            <span>⚡</span> Git Repo
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4: Protiva Store -->
-                <div class="project-card bg-cyber-dark/60 border border-cyber-border rounded-lg p-6 flex flex-col justify-between hover:border-cyan-500 transition-all duration-300 group shadow-lg" data-category="frontend">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-mono text-base font-semibold text-slate-200 group-hover:text-cyan-400 transition-colors">Protiva Store</h3>
-                            <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">ECOMMERCE</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
-                            A responsive single-page digital storefront engineered to showcase products cleanly with a smooth browsing layout across multiple screen sizes.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] mb-6">
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">HTML</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">CSS3</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">JavaScript</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 font-mono text-xs pt-4 border-t border-cyber-border">
-                        <a href="https://protiva-store.vercel.app/" target="_blank" class="flex-1 py-2 text-center bg-cyan-950/60 border border-cyan-500/40 text-cyan-400 rounded hover:bg-cyan-900/40 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>▶</span> Live Demo
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/Protiva-Store" target="_blank" class="flex-1 py-2 text-center bg-slate-900 border border-slate-700/50 text-slate-300 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1.5">
-                            <span>⚡</span> Git Repo
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card bg-cyber-dark/60 border border-cyber-border rounded-lg p-6 flex flex-col justify-between hover:border-matrix-500 transition-all duration-300 group shadow-lg" data-category="fullstack">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-mono text-base font-semibold text-slate-200 group-hover:text-matrix-400 transition-colors">DevStream</h3>
-                            <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-matrix-950 text-matrix-400 border border-matrix-500/30">V1.0</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
-                            Architected and developed the frontend interface for a comprehensive student web portal and learning management system. Designed with a premium, dark-mode SaaS aesthetic, the platform facilitates academic engagement through structured technical pathways, notice board integrations, and video lecture distribution.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] mb-6">
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Vite</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React.js</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-2 font-mono text-xs pt-4 border-t border-cyber-border">
-                        <a href="https://devstream-ui.netlify.app/" target="_blank" class="flex-1 min-w-[90px] py-2 text-center bg-matrix-950/80 border border-matrix-500/50 text-matrix-400 rounded hover:bg-matrix-900/60 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>▶</span> Live Demo
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-frontend.git" target="_blank" class="py-2 px-3 text-center bg-slate-900 border border-slate-700/50 text-slate-300 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1">
-                            <span>⚡</span> Frontend
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-backend.git" target="_blank" class="py-2 px-3 text-center bg-slate-900 border border-slate-700/50 text-slate-300 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1">
-                            <span>⚡</span> Backend
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 6: Pro Code Editor - Hacker Edition -->
-                <div class="project-card bg-cyber-dark/60 border border-cyber-border rounded-lg p-6 flex flex-col justify-between hover:border-matrix-500 transition-all duration-300 group shadow-lg" data-category="cli">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-mono text-base font-semibold text-slate-200 group-hover:text-matrix-400 transition-colors">Pro Code Editor - Hacker Edition</h3>
-                            <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-matrix-950 text-matrix-400 border border-matrix-500/30">DESKTOP APP</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
-                            A futuristic, high-performance desktop code editor built with Electron. Features a custom Cyberpunk Glassmorphism UI, Monaco Editor syntax engine, and an integrated real-time xterm.js terminal.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] mb-6">
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Electron</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Monaco</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">xterm.js</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-2 font-mono text-xs pt-4 border-t border-cyber-border">
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor---Hacker-Edition.git" target="_blank" class="flex-1 py-2 text-center bg-matrix-950/80 border border-matrix-500/50 text-matrix-400 rounded hover:bg-matrix-900/60 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>⚡</span> Git Repo
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor---Hacker-Edition/releases/download/v1.0.0/my-editor-1.0.0.Setup.exe" target="_blank" class="flex-1 py-2 text-center bg-cyan-950/60 border border-cyan-500/40 text-cyan-400 rounded hover:bg-cyan-900/40 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>⚡</span> exe
-                        </a>
-                    </div>
-                </div>
-                <!-- Project: Enterprise Telemetry Engine -->
-                <div class="project-card bg-cyber-dark/60 border border-cyber-border rounded-lg p-6 flex flex-col justify-between hover:border-cyan-500 transition-all duration-300 group shadow-lg" data-category="cli">
-                    <div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="font-mono text-base font-semibold text-slate-200 group-hover:text-cyan-400 transition-colors">Enterprise Telemetry Engine</h3>
-                            <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">DESKTOP APP</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
-                            A high-performance desktop system monitor built with Electron and Chart.js. Features real-time multi-core CPU, RAM, GPU, thermal sensors, disk I/O metrics, network latency ping tracking, and a collapsible Mini HUD widget mode.
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 font-mono text-[11px] mb-6">
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Electron</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Systeminformation</span>
-                            <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Chart.js</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 font-mono text-xs pt-4 border-t border-cyber-border">
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine.git" target="_blank" class="flex-1 py-2 text-center bg-cyan-950/60 border border-cyan-500/40 text-cyan-400 rounded hover:bg-cyan-900/40 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>⚡</span> Git Repo 
-                        </a>
-                        <a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine/releases/download/v1.0.0/Telemetry.Engine-1.0.0.Setup.exe" target="_blank" class="flex-1 py-2 text-center bg-cyan-950/60 border border-cyan-500/40 text-cyan-400 rounded hover:bg-cyan-900/40 transition-colors flex items-center justify-center gap-1.5 shadow">
-                            <span>⚡</span> exe
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Engineering Pipeline & Process Section -->
-        <section id="process" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-                <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
-                    <span class="text-matrix-400">#</span> Engineering Pipeline & Process
-                </h2>
-                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-matrix-950 text-matrix-400 border border-matrix-500/30 animate-pulse">SYSTEM_WORKFLOW</span>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                
-                <!-- Schematic / Image Viewer -->
-                <div class="relative group p-2 bg-cyber-dark border border-cyber-border rounded-lg shadow-[0_0_15px_rgba(0,240,255,0.1)] hover:border-cyan-500/50 transition-colors duration-500">
-                    <div class="absolute inset-0 bg-cyan-500/5 blur-lg group-hover:bg-cyan-500/20 transition-all duration-500 pointer-events-none"></div>
                     
-                    <!-- USER INSTRUCTION: Replace this image URL with your actual project diagram/wireframe URL -->
-                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="Project Architecture Process" class="w-full h-64 md:h-80 object-cover rounded border border-cyber-border opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">College Management System</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A centralized hub for students and faculty to manage academic records, assignments, and real-time notices without friction.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-2">
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                                <li><span class="text-cyan-500">></span> Secure role-based auth (Admin/Faculty/Student) via JWT.</li>
+                                <li><span class="text-cyan-500">></span> Automated attendance tracking pushed to MongoDB cluster.</li>
+                                <li><span class="text-cyan-500">></span> Real-time notice broadcasting via optimized REST APIs.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://collage-portal-ohc0.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch Web Portal ↗</a></div>
+                                <div class="mb-1 flex"><span class="text-slate-500 w-24">FRONTEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/frontend" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                                <div class="flex"><span class="text-slate-500 w-24">BACKEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/backend" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 02: Nexus CLI -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-matrix-500/50 transition-all duration-300 shadow-lg group">
+                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
+                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800" alt="CLI Terminal" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">NPM_PACKAGE</div>
+                    </div>
                     
-                    <!-- Image HUD Overlay -->
-                    <div class="absolute top-4 right-4 bg-black/80 border border-cyan-500/50 px-2 py-1 rounded font-mono text-[10px] text-cyan-400 backdrop-blur-sm">
-                        IMG_SRC_01 // ARCHITECTURE
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Nexus CLI Scaffolder</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A time-saving tool for developers that instantly sets up project architecture, configures folder structures, and streamlines local workspace setups.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-2">
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Node.js</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Commander.js</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> ARCHITECTURE</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                                <li><span class="text-matrix-500">></span> Built with Node.js to parse command-line arguments.</li>
+                                <li><span class="text-matrix-500">></span> Automated filesystem (fs) operations to build templates.</li>
+                                <li><span class="text-matrix-500">></span> Published globally to the NPM registry for instant access.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> DEPLOYMENT_COMMANDS</h4>
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="text-slate-500 mb-1">// Install globally via NPM:</div>
+                                <div class="mb-2 text-cyan-400 select-all">$ npm install -g @glitchedranjan/nexus-cli</div>
+                                <div class="text-slate-500 mb-1">// Execute package:</div>
+                                <div class="mb-1 text-matrix-400 select-all">$ nexus init</div>
+                                <div class="mt-2 pt-2 border-t border-cyber-border flex gap-4">
+                                    <a href="https://www.npmjs.com/package/@glitchedranjan/nexus-cli" target="_blank" class="text-cyan-400 hover:underline">View on NPM ↗</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Cyber Corners for Image -->
-                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-500"></div>
-                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyan-500"></div>
                 </div>
 
-                <!-- Process Steps Timeline -->
-                <div class="space-y-6 relative">
-                    <!-- Vertical Line connecting steps -->
-                    <div class="absolute left-4 top-4 bottom-4 w-px bg-gradient-to-b from-matrix-500 via-cyber-border to-transparent hidden sm:block"></div>
-
-                    <!-- Step 1 -->
-                    <div class="relative flex items-start gap-4">
-                        <div class="w-8 h-8 rounded-full bg-cyber-dark border border-matrix-500 flex items-center justify-center text-matrix-400 font-mono text-xs shadow-[0_0_10px_rgba(34,197,94,0.3)] shrink-0 z-10 mt-1 relative">
-                            <span class="absolute inset-0 rounded-full bg-matrix-500/20 animate-ping"></span>
-                            01
+                <!-- PORTAL 03: Nexus Workspace -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
+                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">REAL_TIME_NODE</div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Nexus Collaborative Workspace</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A live workspace app enabling seamless team chat and communication with secure session management and reliable history storage.</p>
                         </div>
-                        <div class="bg-slate-900/50 border border-cyber-border rounded-lg p-4 flex-1 hover:border-matrix-500/50 transition-colors shadow-lg">
-                            <h3 class="font-mono text-sm text-matrix-400 mb-2">System Blueprint & Logic Design</h3>
-                            <p class="text-xs text-slate-400 leading-relaxed">Defining core requirements, structuring the database schemas, and mapping out secure API endpoints before writing the first line of code.</p>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                                <li><span class="text-cyan-500">></span> WebSockets integrated for zero-latency messaging.</li>
+                                <li><span class="text-cyan-500">></span> Express backend handling data tunneling and persistence.</li>
+                                <li><span class="text-cyan-500">></span> Component-based React architecture for fluid UI rendering.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://nexus-real-time-developer-workspace.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch Workspace ↗</a></div>
+                                <div class="flex"><span class="text-slate-500 w-24">SOURCE:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/-Nexus-Real-Time-Developer-Workspace" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Step 2 -->
-                    <div class="relative flex items-start gap-4">
-                        <div class="w-8 h-8 rounded-full bg-cyber-dark border border-cyan-500 flex items-center justify-center text-cyan-400 font-mono text-xs shadow-[0_0_10px_rgba(0,240,255,0.3)] shrink-0 z-10 mt-1">
-                            02
-                        </div>
-                        <div class="bg-slate-900/50 border border-cyber-border rounded-lg p-4 flex-1 hover:border-cyan-500/50 transition-colors shadow-lg">
-                            <h3 class="font-mono text-sm text-cyan-400 mb-2">Core Development & Assembly</h3>
-                            <p class="text-xs text-slate-400 leading-relaxed">Writing efficient algorithms in C/Python and building the application logic using the MERN stack. Integrating robust backend microservices with a responsive UI.</p>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="relative flex items-start gap-4">
-                        <div class="w-8 h-8 rounded-full bg-cyber-dark border border-matrix-500 flex items-center justify-center text-matrix-400 font-mono text-xs shadow-[0_0_10px_rgba(34,197,94,0.3)] shrink-0 z-10 mt-1">
-                            03
-                        </div>
-                        <div class="bg-slate-900/50 border border-cyber-border rounded-lg p-4 flex-1 hover:border-matrix-500/50 transition-colors shadow-lg">
-                            <h3 class="font-mono text-sm text-matrix-400 mb-2">Security Audit & Deployment</h3>
-                            <p class="text-xs text-slate-400 leading-relaxed">Implementing encryption protocols, testing for vulnerabilities, and pushing the final build to live cloud infrastructure for high-performance delivery.</p>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- PORTAL 04: Protiva Store -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-matrix-500/50 transition-all duration-300 shadow-lg group">
+                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">ECOMMERCE_UI</div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Protiva Store</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A responsive single-page digital storefront engineered to showcase products cleanly with a smooth browsing layout across multiple screen sizes.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> ARCHITECTURE</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                                <li><span class="text-matrix-500">></span> Native HTML5 semantic structure for SEO optimization.</li>
+                                <li><span class="text-matrix-500">></span> CSS3 Grid/Flexbox for pixel-perfect responsive breakpoints.</li>
+                                <li><span class="text-matrix-500">></span> Vanilla JavaScript handling DOM state and cart logic.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://protiva-store.vercel.app/" target="_blank" class="text-matrix-400 hover:underline">View Storefront ↗</a></div>
+                                <div class="flex"><span class="text-slate-500 w-24">SOURCE:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/Protiva-Store" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 05: DevStream -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
+                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LMS_PLATFORM</div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">DevStream</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">Architected the frontend for a comprehensive student learning management system with a premium dark-mode SaaS aesthetic.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                                <li><span class="text-cyan-500">></span> Accelerated frontend tooling configured via Vite.</li>
+                                <li><span class="text-cyan-500">></span> Complex UI states managed seamlessly with React.js.</li>
+                                <li><span class="text-cyan-500">></span> Backend database schemas mapped securely to MongoDB.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://devstream-ui.netlify.app/" target="_blank" class="text-matrix-400 hover:underline">Launch DevStream ↗</a></div>
+                                <div class="mb-1 flex"><span class="text-slate-500 w-24">FRONTEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-frontend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                                <div class="flex"><span class="text-slate-500 w-24">BACKEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-backend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 06: Pro Code Editor -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-matrix-500/50 transition-all duration-300 shadow-lg group">
+                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">LOCAL_CLIENT</div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Pro Code Editor (Desktop)</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A high-performance local IDE built for speed and cyberpunk aesthetics, featuring syntax highlighting and an integrated terminal.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> ARCHITECTURE</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                                <li><span class="text-matrix-500">></span> Electron.js core for cross-platform desktop compilation.</li>
+                                <li><span class="text-matrix-500">></span> Monaco Editor integration for VS Code level syntax logic.</li>
+                                <li><span class="text-matrix-500">></span> xterm.js used to pipe real-time bash/powershell I/O.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> DEPLOYMENT_COMMANDS</h4>
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="text-slate-500 mb-1">// Clone and run locally:</div>
+                                <div class="mb-1 text-cyan-400 select-all">$ git clone https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor.git</div>
+                                <div class="text-matrix-400 select-all">$ npm start</div>
+                                <div class="mt-2 pt-2 border-t border-cyber-border flex justify-between items-center">
+                                    <span class="text-slate-500">OR DOWNLOAD .EXE:</span>
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor---Hacker-Edition/releases/download/v1.0.0/my-editor-1.0.0.Setup.exe" class="px-3 py-1 bg-slate-900 border border-slate-700 hover:border-matrix-500 text-slate-200 rounded transition-colors text-center">Download v1.0.0</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 07: Enterprise Telemetry Engine -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
+                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">SYS_MONITOR</div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Enterprise Telemetry Engine</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A high-performance desktop system monitor. Features real-time multi-core CPU, RAM, GPU, thermal sensors, and network latency tracking.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                                <li><span class="text-cyan-500">></span> Electron IPC channels bridge frontend UI and OS-level hardware data.</li>
+                                <li><span class="text-cyan-500">></span> Systeminformation library extracts raw sensor telemetry.</li>
+                                <li><span class="text-cyan-500">></span> Chart.js renders data into fluid, dynamic performance graphs.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="text-slate-500 mb-1">// Clone Repository:</div>
+                                <div class="mb-2 text-cyan-400 select-all"><a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine.git" target="_blank" class="hover:underline">github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine.git</a></div>
+                                <div class="mt-2 pt-2 border-t border-cyber-border flex justify-between items-center">
+                                    <span class="text-slate-500">STANDALONE APP:</span>
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine/releases/download/v1.0.0/Telemetry.Engine-1.0.0.Setup.exe" class="px-3 py-1 bg-slate-900 border border-slate-700 hover:border-cyan-500 text-slate-200 rounded transition-colors text-center">Download EXE File</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -553,7 +534,7 @@
                 <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
                     <button onclick="runQuickCommand('help')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">help</button>
                     <button onclick="runQuickCommand('skills')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">skills</button>
-                    <button onclick="runQuickCommand('projects')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">projects</button>
+                    <button onclick="runQuickCommand('portals')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">portals</button>
                     <button onclick="runQuickCommand('matrix')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">matrix</button>
                     <button onclick="runQuickCommand('clear')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-red-400 hover:text-red-300 rounded">clear</button>
                 </div>
@@ -675,31 +656,6 @@
             });
         }
 
-        // Project Filter Functionality
-        function filterProjects(category) {
-            const cards = document.querySelectorAll('.project-card');
-            const buttons = document.querySelectorAll('.filter-btn');
-
-            buttons.forEach(btn => {
-                if(btn.getAttribute('data-filter') === category) {
-                    btn.classList.add('bg-matrix-950', 'border-matrix-500/50', 'text-matrix-400');
-                    btn.classList.remove('bg-slate-900', 'border-cyber-border', 'text-slate-400');
-                } else {
-                    btn.classList.remove('bg-matrix-950', 'border-matrix-500/50', 'text-matrix-400');
-                    btn.classList.add('bg-slate-900', 'border-cyber-border', 'text-slate-400');
-                }
-            });
-
-            cards.forEach(card => {
-                if(category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            showToast(`[SYS_FILTER] Applied category: ${category.toUpperCase()}`);
-        }
-
         // Simulated Contact Form Submit
         function handleContactSubmit(event) {
             event.preventDefault();
@@ -744,7 +700,7 @@
         function handleCommand(cmd) {
             switch(cmd) {
                 case 'help':
-                    printToTerminal("Available flags: [about, skills, projects, contact, status, matrix, clear]");
+                    printToTerminal("Available flags: [about, skills, portals, contact, status, matrix, clear]");
                     break;
                 case 'about':
                     printToTerminal("Priya Ranjan Chaki - CSE student focused on secure systems, full-stack development, and architecture.");
@@ -752,8 +708,8 @@
                 case 'skills':
                     printToTerminal("Core: Python, C, JavaScript, MERN Stack, Node.js, Linux, Git.");
                     break;
-                case 'projects':
-                    printToTerminal("1. College Management Portal\n2. Nexus CLI Scaffolder\n3. Nexus Collaborative Workspace\n4. Protiva Store\n5. DevStream\n6. Pro Code Editor - Hacker Edition");
+                case 'portals':
+                    printToTerminal("Loaded Active Portals: 1. College Mgmt, 2. Nexus CLI, 3. Nexus Workspace, 4. Protiva Store, 5. DevStream, 6. Pro Code Editor, 7. Telemetry Engine");
                     break;
                 case 'contact':
                     printToTerminal("Endpoints: priyaranjanchaki9@gmail.com | GitHub: PRIYA-RANJAN-CHAKI");
