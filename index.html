@@ -473,6 +473,76 @@
             </div>
         </section>
 
+        <!-- Engineering Pipeline & Process Section -->
+        <section id="process" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+                <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
+                    <span class="text-matrix-400">#</span> Engineering Pipeline & Process
+                </h2>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-matrix-950 text-matrix-400 border border-matrix-500/30 animate-pulse">SYSTEM_WORKFLOW</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                
+                <!-- Schematic / Image Viewer -->
+                <div class="relative group p-2 bg-cyber-dark border border-cyber-border rounded-lg shadow-[0_0_15px_rgba(0,240,255,0.1)] hover:border-cyan-500/50 transition-colors duration-500">
+                    <div class="absolute inset-0 bg-cyan-500/5 blur-lg group-hover:bg-cyan-500/20 transition-all duration-500 pointer-events-none"></div>
+                    
+                    <!-- USER INSTRUCTION: Replace this image URL with your actual project diagram/wireframe URL -->
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="Project Architecture Process" class="w-full h-64 md:h-80 object-cover rounded border border-cyber-border opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                    
+                    <!-- Image HUD Overlay -->
+                    <div class="absolute top-4 right-4 bg-black/80 border border-cyan-500/50 px-2 py-1 rounded font-mono text-[10px] text-cyan-400 backdrop-blur-sm">
+                        IMG_SRC_01 // ARCHITECTURE
+                    </div>
+                    <!-- Cyber Corners for Image -->
+                    <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-500"></div>
+                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyan-500"></div>
+                </div>
+
+                <!-- Process Steps Timeline -->
+                <div class="space-y-6 relative">
+                    <!-- Vertical Line connecting steps -->
+                    <div class="absolute left-4 top-4 bottom-4 w-px bg-gradient-to-b from-matrix-500 via-cyber-border to-transparent hidden sm:block"></div>
+
+                    <!-- Step 1 -->
+                    <div class="relative flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-cyber-dark border border-matrix-500 flex items-center justify-center text-matrix-400 font-mono text-xs shadow-[0_0_10px_rgba(34,197,94,0.3)] shrink-0 z-10 mt-1 relative">
+                            <span class="absolute inset-0 rounded-full bg-matrix-500/20 animate-ping"></span>
+                            01
+                        </div>
+                        <div class="bg-slate-900/50 border border-cyber-border rounded-lg p-4 flex-1 hover:border-matrix-500/50 transition-colors shadow-lg">
+                            <h3 class="font-mono text-sm text-matrix-400 mb-2">System Blueprint & Logic Design</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Defining core requirements, structuring the database schemas, and mapping out secure API endpoints before writing the first line of code.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-cyber-dark border border-cyan-500 flex items-center justify-center text-cyan-400 font-mono text-xs shadow-[0_0_10px_rgba(0,240,255,0.3)] shrink-0 z-10 mt-1">
+                            02
+                        </div>
+                        <div class="bg-slate-900/50 border border-cyber-border rounded-lg p-4 flex-1 hover:border-cyan-500/50 transition-colors shadow-lg">
+                            <h3 class="font-mono text-sm text-cyan-400 mb-2">Core Development & Assembly</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Writing efficient algorithms in C/Python and building the application logic using the MERN stack. Integrating robust backend microservices with a responsive UI.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-cyber-dark border border-matrix-500 flex items-center justify-center text-matrix-400 font-mono text-xs shadow-[0_0_10px_rgba(34,197,94,0.3)] shrink-0 z-10 mt-1">
+                            03
+                        </div>
+                        <div class="bg-slate-900/50 border border-cyber-border rounded-lg p-4 flex-1 hover:border-matrix-500/50 transition-colors shadow-lg">
+                            <h3 class="font-mono text-sm text-matrix-400 mb-2">Security Audit & Deployment</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Implementing encryption protocols, testing for vulnerabilities, and pushing the final build to live cloud infrastructure for high-performance delivery.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Interactive Terminal Sub-System -->
         <section class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
