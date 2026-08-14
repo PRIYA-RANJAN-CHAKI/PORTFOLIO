@@ -96,17 +96,11 @@
 
         /* Custom Horizontal Scrollbar for Image Gallery */
         .cyber-scrollbar::-webkit-scrollbar {
-            height: 4px;
+            height: 0px; /* Hidden scrollbar height since we have arrows now */
         }
-        .cyber-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .cyber-scrollbar::-webkit-scrollbar-thumb {
-            background: #1b263b;
-            border-radius: 2px;
-        }
-        .cyber-scrollbar:hover::-webkit-scrollbar-thumb {
-            background: #00f0ff; /* Glows cyan when hovering over images */
+        .cyber-scrollbar {
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none;  /* For Internet Explorer and Edge */
         }
 
         .matrix-bg {
@@ -286,12 +280,18 @@
             <!-- CSS Grid Container (3 columns on XL screens) -->
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 
-                <!-- PORTAL 01: College Management Portal (EXAMPLE OF 3 IMAGES) -->
+                <!-- PORTAL 01: College Management Portal (WITH ARROWS) -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     
                     <!-- Multi-Image Gallery Container -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <!-- Scrollable Image Track (Flex row) -->
+                        
+                        <!-- Left Navigation Arrow -->
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+                            &#10094;
+                        </button>
+
+                        <!-- Scrollable Image Track -->
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
                             <!-- Image 1 -->
                             <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="UI 1" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
@@ -300,15 +300,15 @@
                             <!-- Image 3 -->
                             <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="UI 3" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         </div>
+
+                        <!-- Right Navigation Arrow -->
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+                            &#10095;
+                        </button>
                         
                         <!-- Top Right HUD Label -->
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">
                             LIVE_FEED_01
-                        </div>
-                        
-                        <!-- Bottom Scroll Indicator (Shows if you have multiple images) -->
-                        <div class="absolute bottom-3 right-3 bg-black/60 px-2 py-1 text-[9px] text-slate-300 font-mono rounded backdrop-blur pointer-events-none border border-slate-700 animate-pulse">
-                            SCROLL ➔
                         </div>
                     </div>
                     <!-- Details section below... -->
@@ -350,19 +350,30 @@
                     </div>
                 </div>
 
-                <!-- PORTAL 02: Nexus CLI (EXAMPLE OF 2 IMAGES) -->
+                <!-- PORTAL 02: Nexus CLI (WITH ARROWS) -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     
                     <!-- Multi-Image Gallery Container -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        
+                        <!-- Left Navigation Arrow -->
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+                            &#10094;
+                        </button>
+
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
                             <!-- Image 1 -->
-                            <img src="images/NPMSS.png" alt="NPMSS">
+                            <img src="/images/images/NPMSS.png" alt="NPMSS">
                             <!-- Image 2 -->
                             <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="CLI 2" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         </div>
+
+                        <!-- Right Navigation Arrow -->
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+                            &#10095;
+                        </button>
+
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">NPM_PACKAGE</div>
-                        <div class="absolute bottom-3 right-3 bg-black/60 px-2 py-1 text-[9px] text-slate-300 font-mono rounded backdrop-blur pointer-events-none border border-slate-700 animate-pulse">SCROLL ➔</div>
                     </div>
 
                     <div class="p-5 flex flex-col flex-1 gap-4">
@@ -397,15 +408,15 @@
                     </div>
                 </div>
 
-                <!-- PORTAL 03: Nexus Workspace (EXAMPLE OF 1 IMAGE) -->
+                <!-- PORTAL 03: Nexus Workspace -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     
-                    <!-- Single Image Container -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <!-- Sirf 1 Image hai yahan, koi scroll nahi hoga -->
                             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">REAL_TIME_NODE</div>
                     </div>
 
@@ -445,9 +456,11 @@
                 <!-- PORTAL 04: Protiva Store -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
                             <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">ECOMMERCE_UI</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
@@ -486,9 +499,11 @@
                 <!-- PORTAL 05: DevStream -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
                             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">LMS_PLATFORM</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
@@ -531,9 +546,11 @@
                 <!-- PORTAL 06: Pro Code Editor -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
                             <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">LOCAL_CLIENT</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
@@ -570,9 +587,11 @@
                 <!-- PORTAL 07: Enterprise Telemetry Engine -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full xl:col-start-2">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
                             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">SYS_MONITOR</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
@@ -711,6 +730,22 @@
 
     <!-- Script Utilities -->
     <script>
+        // Image Gallery Scroll Function
+        function scrollGallery(button, direction) {
+            // Container find karo
+            const container = button.closest('.relative');
+            const track = container.querySelector('.cyber-scrollbar');
+            
+            if (track) {
+                // Ek image ka width kitna hai utna hi scroll karo
+                const scrollAmount = track.clientWidth;
+                track.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth' // Smooth sliding effect
+                });
+            }
+        }
+
         // Live UTC Clock
         function updateClock() {
             const now = new Date();
