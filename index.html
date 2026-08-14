@@ -209,7 +209,6 @@
 
         <!-- Grid Container for About & Tech Stack -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            
             <!-- About Profile -->
             <div class="cyber-border md:col-span-1 bg-cyber-card border border-cyber-border rounded-xl p-6 flex flex-col justify-between shadow-xl">
                 <div>
@@ -231,7 +230,6 @@
                 <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider mb-6 flex items-center gap-2">
                     <span class="text-matrix-400">#</span> Core Competencies
                 </h2>
-                
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
                     <div class="p-4 rounded-lg bg-cyber-dark/80 border border-cyber-border hover:border-cyan-500/40 transition-colors">
                         <div class="text-cyan-400 font-semibold mb-2 flex items-center gap-1.5">
@@ -244,7 +242,6 @@
                             <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">HTML5/CSS3</span>
                         </div>
                     </div>
-
                     <div class="p-4 rounded-lg bg-cyber-dark/80 border border-cyber-border hover:border-matrix-500/40 transition-colors">
                         <div class="text-matrix-400 font-semibold mb-2 flex items-center gap-1.5">
                             <span>◆</span> Frameworks & Infrastructure
@@ -258,92 +255,101 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <!-- Active Portals & Access Nodes (Detailed Project Showcase) -->
+        <!-- NEW GRID LAYOUT: Active Portals & Access Nodes -->
         <section id="portals" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
                 <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
                     <span class="text-cyan-400">#</span> Active Portals & Access Nodes
                 </h2>
-                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">SYSTEM_SHOWCASE</span>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">GRID_VIEW_ENABLED</span>
             </div>
 
-            <div class="space-y-8">
+            <!-- CSS Grid Container (2 Columns on medium screens and up) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <!-- PORTAL 01: College Management Portal -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
-                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
-                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="College Portal UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <!-- Image -->
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="College Portal UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LIVE_FEED_01</div>
                     </div>
-                    
-                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                    <!-- Details -->
+                    <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">College Management System</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A centralized hub for students and faculty to manage academic records, assignments, and real-time notices without friction.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-2">
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A centralized hub for students and faculty to manage academic records, assignments, and real-time notices without friction.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
                             </div>
                         </div>
-
                         <div>
-                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
-                                <li><span class="text-cyan-500">></span> Secure role-based auth (Admin/Faculty/Student) via JWT.</li>
-                                <li><span class="text-cyan-500">></span> Automated attendance tracking pushed to MongoDB cluster.</li>
-                                <li><span class="text-cyan-500">></span> Real-time notice broadcasting via optimized REST APIs.</li>
+                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+                                <li><span class="text-cyan-500">></span> Role-based auth (Admin/Faculty/Student) via JWT.</li>
+                                <li><span class="text-cyan-500">></span> Automated attendance tracking pushed to cluster.</li>
+                                <li><span class="text-cyan-500">></span> Real-time notice broadcasting via REST APIs.</li>
                             </ul>
                         </div>
-
-                        <div>
-                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                        <!-- Terminal Box (Pushed to bottom) -->
+                        <div class="mt-auto pt-2">
+                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://collage-portal-ohc0.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch Web Portal ↗</a></div>
-                                <div class="mb-1 flex"><span class="text-slate-500 w-24">FRONTEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/frontend" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
-                                <div class="flex"><span class="text-slate-500 w-24">BACKEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/backend" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                                <div class="mb-1 flex justify-between">
+                                    <span class="text-slate-500">ENDPOINT:</span> 
+                                    <a href="https://collage-portal-ohc0.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
+                                </div>
+                                <div class="mb-1 flex justify-between">
+                                    <span class="text-slate-500">FRONTEND:</span> 
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/frontend" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-500">BACKEND:</span> 
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/backend" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- PORTAL 02: Nexus CLI -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-matrix-500/50 transition-all duration-300 shadow-lg group">
-                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
-                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800" alt="CLI Terminal" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <!-- Image -->
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800" alt="CLI Terminal" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">NPM_PACKAGE</div>
                     </div>
-                    
-                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                    <!-- Details -->
+                    <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Nexus CLI Scaffolder</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A time-saving tool for developers that instantly sets up project architecture, configures folder structures, and streamlines local workspace setups.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-2">
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A time-saving tool for developers that instantly sets up project architecture, configures folders, and streamlines workspace setups.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Node.js</span>
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Commander.js</span>
                             </div>
                         </div>
-
                         <div>
-                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> ARCHITECTURE</h4>
-                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ARCHITECTURE</h4>
+                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
                                 <li><span class="text-matrix-500">></span> Built with Node.js to parse command-line arguments.</li>
-                                <li><span class="text-matrix-500">></span> Automated filesystem (fs) operations to build templates.</li>
-                                <li><span class="text-matrix-500">></span> Published globally to the NPM registry for instant access.</li>
+                                <li><span class="text-matrix-500">></span> Automated fs operations to build templates.</li>
+                                <li><span class="text-matrix-500">></span> Published globally to the NPM registry.</li>
                             </ul>
                         </div>
-
-                        <div>
-                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> DEPLOYMENT_COMMANDS</h4>
+                        <!-- Terminal Box -->
+                        <div class="mt-auto pt-2">
+                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> DEPLOYMENT_COMMANDS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="text-slate-500 mb-1">// Install globally via NPM:</div>
-                                <div class="mb-2 text-cyan-400 select-all">$ npm install -g @glitchedranjan/nexus-cli</div>
+                                <div class="mb-2 text-cyan-400 select-all">$ npm i -g @glitchedranjan/nexus-cli</div>
                                 <div class="text-slate-500 mb-1">// Execute package:</div>
                                 <div class="mb-1 text-matrix-400 select-all">$ nexus init</div>
-                                <div class="mt-2 pt-2 border-t border-cyber-border flex gap-4">
+                                <div class="mt-2 pt-2 border-t border-cyber-border text-center">
                                     <a href="https://www.npmjs.com/package/@glitchedranjan/nexus-cli" target="_blank" class="text-cyan-400 hover:underline">View on NPM ↗</a>
                                 </div>
                             </div>
@@ -352,133 +358,165 @@
                 </div>
 
                 <!-- PORTAL 03: Nexus Workspace -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
-                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <!-- Image -->
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">REAL_TIME_NODE</div>
                     </div>
-                    
-                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                    <!-- Details -->
+                    <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
-                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Nexus Collaborative Workspace</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A live workspace app enabling seamless team chat and communication with secure session management and reliable history storage.</p>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Nexus Collab Workspace</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A live workspace app enabling seamless team chat and communication with secure session management and reliable history storage.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Socket.io</span>
+                            </div>
                         </div>
-
                         <div>
-                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
                                 <li><span class="text-cyan-500">></span> WebSockets integrated for zero-latency messaging.</li>
-                                <li><span class="text-cyan-500">></span> Express backend handling data tunneling and persistence.</li>
-                                <li><span class="text-cyan-500">></span> Component-based React architecture for fluid UI rendering.</li>
+                                <li><span class="text-cyan-500">></span> Express backend handling data persistence.</li>
+                                <li><span class="text-cyan-500">></span> Component-based React architecture for UI.</li>
                             </ul>
                         </div>
-
-                        <div>
-                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                        <!-- Terminal Box -->
+                        <div class="mt-auto pt-2">
+                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://nexus-real-time-developer-workspace.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch Workspace ↗</a></div>
-                                <div class="flex"><span class="text-slate-500 w-24">SOURCE:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/-Nexus-Real-Time-Developer-Workspace" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                                <div class="mb-1 flex justify-between">
+                                    <span class="text-slate-500">ENDPOINT:</span> 
+                                    <a href="https://nexus-real-time-developer-workspace.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-500">SOURCE:</span> 
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/-Nexus-Real-Time-Developer-Workspace" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- PORTAL 04: Protiva Store -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-matrix-500/50 transition-all duration-300 shadow-lg group">
-                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
-                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <!-- Image -->
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">ECOMMERCE_UI</div>
                     </div>
-                    
-                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                    <!-- Details -->
+                    <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Protiva Store</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A responsive single-page digital storefront engineered to showcase products cleanly with a smooth browsing layout across multiple screen sizes.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A responsive single-page digital storefront engineered to showcase products cleanly with a smooth browsing layout.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">HTML/CSS</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Vanilla JS</span>
+                            </div>
                         </div>
-
                         <div>
-                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> ARCHITECTURE</h4>
-                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
-                                <li><span class="text-matrix-500">></span> Native HTML5 semantic structure for SEO optimization.</li>
-                                <li><span class="text-matrix-500">></span> CSS3 Grid/Flexbox for pixel-perfect responsive breakpoints.</li>
-                                <li><span class="text-matrix-500">></span> Vanilla JavaScript handling DOM state and cart logic.</li>
+                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ARCHITECTURE</h4>
+                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+                                <li><span class="text-matrix-500">></span> Native HTML5 semantic structure for SEO.</li>
+                                <li><span class="text-matrix-500">></span> CSS3 Grid/Flexbox for perfect breakpoints.</li>
+                                <li><span class="text-matrix-500">></span> Vanilla JavaScript handling DOM state & cart.</li>
                             </ul>
                         </div>
-
-                        <div>
-                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                        <!-- Terminal Box -->
+                        <div class="mt-auto pt-2">
+                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://protiva-store.vercel.app/" target="_blank" class="text-matrix-400 hover:underline">View Storefront ↗</a></div>
-                                <div class="flex"><span class="text-slate-500 w-24">SOURCE:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/Protiva-Store" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                                <div class="mb-1 flex justify-between">
+                                    <span class="text-slate-500">ENDPOINT:</span> 
+                                    <a href="https://protiva-store.vercel.app/" target="_blank" class="text-matrix-400 hover:underline">View Store ↗</a>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-500">SOURCE:</span> 
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/Protiva-Store" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- PORTAL 05: DevStream -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
-                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <!-- Image -->
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LMS_PLATFORM</div>
                     </div>
-                    
-                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                    <!-- Details -->
+                    <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">DevStream</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">Architected the frontend for a comprehensive student learning management system with a premium dark-mode SaaS aesthetic.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Architected the frontend for a student learning management system with a premium dark-mode SaaS aesthetic.</p>
                         </div>
-
                         <div>
-                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
+                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
                                 <li><span class="text-cyan-500">></span> Accelerated frontend tooling configured via Vite.</li>
                                 <li><span class="text-cyan-500">></span> Complex UI states managed seamlessly with React.js.</li>
-                                <li><span class="text-cyan-500">></span> Backend database schemas mapped securely to MongoDB.</li>
+                                <li><span class="text-cyan-500">></span> Backend database schemas mapped to MongoDB.</li>
                             </ul>
                         </div>
-
-                        <div>
-                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                        <!-- Terminal Box -->
+                        <div class="mt-auto pt-2">
+                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex"><span class="text-slate-500 w-24">ENDPOINT:</span> <a href="https://devstream-ui.netlify.app/" target="_blank" class="text-matrix-400 hover:underline">Launch DevStream ↗</a></div>
-                                <div class="mb-1 flex"><span class="text-slate-500 w-24">FRONTEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-frontend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
-                                <div class="flex"><span class="text-slate-500 w-24">BACKEND:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-backend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub Repo ↗</a></div>
+                                <div class="mb-1 flex justify-between">
+                                    <span class="text-slate-500">ENDPOINT:</span> 
+                                    <a href="https://devstream-ui.netlify.app/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
+                                </div>
+                                <div class="mb-1 flex justify-between">
+                                    <span class="text-slate-500">FRONTEND:</span> 
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-frontend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-500">BACKEND:</span> 
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-backend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- PORTAL 06: Pro Code Editor -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-matrix-500/50 transition-all duration-300 shadow-lg group">
-                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
-                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <!-- Image -->
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">LOCAL_CLIENT</div>
                     </div>
-                    
-                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                    <!-- Details -->
+                    <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
-                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Pro Code Editor (Desktop)</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A high-performance local IDE built for speed and cyberpunk aesthetics, featuring syntax highlighting and an integrated terminal.</p>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Pro Code Editor</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A high-performance local IDE built for speed and cyberpunk aesthetics, featuring syntax highlighting and an integrated terminal.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Electron.js</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Monaco</span>
+                            </div>
                         </div>
-
                         <div>
-                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> ARCHITECTURE</h4>
-                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
-                                <li><span class="text-matrix-500">></span> Electron.js core for cross-platform desktop compilation.</li>
-                                <li><span class="text-matrix-500">></span> Monaco Editor integration for VS Code level syntax logic.</li>
-                                <li><span class="text-matrix-500">></span> xterm.js used to pipe real-time bash/powershell I/O.</li>
+                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ARCHITECTURE</h4>
+                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+                                <li><span class="text-matrix-500">></span> Electron.js core for desktop compilation.</li>
+                                <li><span class="text-matrix-500">></span> Monaco Editor for VS Code syntax logic.</li>
+                                <li><span class="text-matrix-500">></span> xterm.js to pipe real-time bash I/O.</li>
                             </ul>
                         </div>
-
-                        <div>
-                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> DEPLOYMENT_COMMANDS</h4>
+                        <!-- Terminal Box -->
+                        <div class="mt-auto pt-2">
+                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> DEPLOYMENT_COMMANDS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="text-slate-500 mb-1">// Clone and run locally:</div>
-                                <div class="mb-1 text-cyan-400 select-all">$ git clone https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor.git</div>
+                                <div class="mb-1 text-cyan-400 select-all truncate">$ git clone https://github.com/...</div>
                                 <div class="text-matrix-400 select-all">$ npm start</div>
-                                <div class="mt-2 pt-2 border-t border-cyber-border flex justify-between items-center">
-                                    <span class="text-slate-500">OR DOWNLOAD .EXE:</span>
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor---Hacker-Edition/releases/download/v1.0.0/my-editor-1.0.0.Setup.exe" class="px-3 py-1 bg-slate-900 border border-slate-700 hover:border-matrix-500 text-slate-200 rounded transition-colors text-center">Download v1.0.0</a>
+                                <div class="mt-2 pt-2 border-t border-cyber-border text-center">
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor---Hacker-Edition/releases/download/v1.0.0/my-editor-1.0.0.Setup.exe" class="text-cyan-400 hover:underline">Download .EXE File ↗</a>
                                 </div>
                             </div>
                         </div>
@@ -486,35 +524,34 @@
                 </div>
 
                 <!-- PORTAL 07: Enterprise Telemetry Engine -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-cyber-dark border border-cyber-border rounded-lg p-5 hover:border-cyan-500/50 transition-all duration-300 shadow-lg group">
-                    <div class="lg:col-span-5 relative overflow-hidden rounded border border-cyber-border">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover min-h-[220px] opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <!-- Image -->
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">SYS_MONITOR</div>
                     </div>
-                    
-                    <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                    <!-- Details -->
+                    <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Enterprise Telemetry Engine</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">A high-performance desktop system monitor. Features real-time multi-core CPU, RAM, GPU, thermal sensors, and network latency tracking.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A high-performance desktop system monitor tracking real-time CPU, RAM, GPU, thermal sensors, and network latency.</p>
                         </div>
-
                         <div>
-                            <h4 class="text-xs font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2"><span>>></span> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-2 font-mono">
-                                <li><span class="text-cyan-500">></span> Electron IPC channels bridge frontend UI and OS-level hardware data.</li>
-                                <li><span class="text-cyan-500">></span> Systeminformation library extracts raw sensor telemetry.</li>
-                                <li><span class="text-cyan-500">></span> Chart.js renders data into fluid, dynamic performance graphs.</li>
+                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
+                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
+                                <li><span class="text-cyan-500">></span> Electron IPC channels bridge UI and OS data.</li>
+                                <li><span class="text-cyan-500">></span> Systeminformation library extracts raw telemetry.</li>
+                                <li><span class="text-cyan-500">></span> Chart.js renders fluid performance graphs.</li>
                             </ul>
                         </div>
-
-                        <div>
-                            <h4 class="text-xs font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1 flex items-center gap-2 mt-2"><span>>></span> ACCESS_PARAMETERS</h4>
+                        <!-- Terminal Box -->
+                        <div class="mt-auto pt-2">
+                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="text-slate-500 mb-1">// Clone Repository:</div>
-                                <div class="mb-2 text-cyan-400 select-all"><a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine.git" target="_blank" class="hover:underline">github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine.git</a></div>
-                                <div class="mt-2 pt-2 border-t border-cyber-border flex justify-between items-center">
-                                    <span class="text-slate-500">STANDALONE APP:</span>
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine/releases/download/v1.0.0/Telemetry.Engine-1.0.0.Setup.exe" class="px-3 py-1 bg-slate-900 border border-slate-700 hover:border-cyan-500 text-slate-200 rounded transition-colors text-center">Download EXE File</a>
+                                <div class="text-slate-500 mb-1">// Source Code:</div>
+                                <div class="mb-2 text-cyan-400 select-all truncate"><a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine.git" target="_blank" class="hover:underline">Github/Telemetry-Engine</a></div>
+                                <div class="mt-2 pt-2 border-t border-cyber-border text-center">
+                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine/releases/download/v1.0.0/Telemetry.Engine-1.0.0.Setup.exe" class="text-matrix-400 hover:underline">Download App .EXE ↗</a>
                                 </div>
                             </div>
                         </div>
