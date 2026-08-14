@@ -152,7 +152,8 @@
     <!-- System Notification Toast -->
     <div id="toast">[SYS_NOTIFY] Operation executed successfully.</div>
 
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 relative z-10">
+    <!-- MAIN WRAPPER (Updated to Full Width) -->
+    <div class="w-full px-4 md:px-10 lg:px-16 xl:px-20 py-10 relative z-10">
 
         <!-- Top Header Navigation HUD -->
         <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-cyber-card border border-cyber-border rounded-lg p-4 mb-8 font-mono text-xs gap-4 shadow-2xl backdrop-blur-md">
@@ -186,7 +187,7 @@
                 SYS_ROOT // ACCESS_GRANTED
             </div>
 
-            <div class="max-w-2xl">
+            <div class="max-w-3xl">
                 <div class="font-mono text-xs text-matrix-400 mb-3 tracking-widest uppercase flex items-center gap-2">
                     <span class="animate-pulse">></span> Full-Stack Developer & Systems Architect
                 </div>
@@ -208,9 +209,9 @@
         </section>
 
         <!-- Grid Container for About & Tech Stack -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <!-- About Profile -->
-            <div class="cyber-border md:col-span-1 bg-cyber-card border border-cyber-border rounded-xl p-6 flex flex-col justify-between shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-8 mb-8">
+            <!-- About Profile (Takes 1 part on md, 2 parts on xl) -->
+            <div class="cyber-border md:col-span-2 xl:col-span-2 bg-cyber-card border border-cyber-border rounded-xl p-6 flex flex-col justify-between shadow-xl">
                 <div>
                     <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider mb-4 flex items-center gap-2">
                         <span class="text-matrix-400">#</span> System Profile
@@ -225,17 +226,17 @@
                 </div>
             </div>
 
-            <!-- Tech Stack Matrix -->
-            <div class="cyber-border md:col-span-2 bg-cyber-card border border-cyber-border rounded-xl p-6 shadow-xl">
+            <!-- Tech Stack Matrix (Takes 3 parts) -->
+            <div class="cyber-border md:col-span-2 xl:col-span-3 bg-cyber-card border border-cyber-border rounded-xl p-6 shadow-xl">
                 <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider mb-6 flex items-center gap-2">
                     <span class="text-matrix-400">#</span> Core Competencies
                 </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 font-mono text-xs">
                     <div class="p-4 rounded-lg bg-cyber-dark/80 border border-cyber-border hover:border-cyan-500/40 transition-colors">
                         <div class="text-cyan-400 font-semibold mb-2 flex items-center gap-1.5">
                             <span>◇</span> Languages & Logic
                         </div>
-                        <div class="flex flex-wrap gap-1.5">
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">Python</span>
                             <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">C</span>
                             <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">JavaScript (ES6+)</span>
@@ -246,7 +247,7 @@
                         <div class="text-matrix-400 font-semibold mb-2 flex items-center gap-1.5">
                             <span>◆</span> Frameworks & Infrastructure
                         </div>
-                        <div class="flex flex-wrap gap-1.5">
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-matrix-500 transition-colors">MERN Stack</span>
                             <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-matrix-500 transition-colors">Node.js</span>
                             <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-matrix-500 transition-colors">Git / CLI</span>
@@ -257,7 +258,7 @@
             </div>
         </div>
 
-        <!-- NEW GRID LAYOUT: Active Portals & Access Nodes -->
+        <!-- Active Portals & Access Nodes -->
         <section id="portals" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
                 <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
@@ -266,17 +267,15 @@
                 <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">GRID_VIEW_ENABLED</span>
             </div>
 
-            <!-- CSS Grid Container (2 Columns on medium screens and up) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- CSS Grid Container (Updated to 3 columns on XL screens) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 
                 <!-- PORTAL 01: College Management Portal -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <!-- Image -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
                         <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="College Portal UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LIVE_FEED_01</div>
                     </div>
-                    <!-- Details -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">College Management System</h3>
@@ -295,8 +294,7 @@
                                 <li><span class="text-cyan-500">></span> Real-time notice broadcasting via REST APIs.</li>
                             </ul>
                         </div>
-                        <!-- Terminal Box (Pushed to bottom) -->
-                        <div class="mt-auto pt-2">
+                        <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="mb-1 flex justify-between">
@@ -318,12 +316,10 @@
 
                 <!-- PORTAL 02: Nexus CLI -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <!-- Image -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
                         <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800" alt="CLI Terminal" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">NPM_PACKAGE</div>
                     </div>
-                    <!-- Details -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Nexus CLI Scaffolder</h3>
@@ -336,13 +332,12 @@
                         <div>
                             <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ARCHITECTURE</h4>
                             <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-matrix-500">></span> Built with Node.js to parse command-line arguments.</li>
+                                <li><span class="text-matrix-500">></span> Built with Node.js to parse CLI arguments.</li>
                                 <li><span class="text-matrix-500">></span> Automated fs operations to build templates.</li>
                                 <li><span class="text-matrix-500">></span> Published globally to the NPM registry.</li>
                             </ul>
                         </div>
-                        <!-- Terminal Box -->
-                        <div class="mt-auto pt-2">
+                        <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> DEPLOYMENT_COMMANDS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="text-slate-500 mb-1">// Install globally via NPM:</div>
@@ -359,12 +354,10 @@
 
                 <!-- PORTAL 03: Nexus Workspace -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <!-- Image -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
                         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">REAL_TIME_NODE</div>
                     </div>
-                    <!-- Details -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Nexus Collab Workspace</h3>
@@ -382,8 +375,7 @@
                                 <li><span class="text-cyan-500">></span> Component-based React architecture for UI.</li>
                             </ul>
                         </div>
-                        <!-- Terminal Box -->
-                        <div class="mt-auto pt-2">
+                        <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="mb-1 flex justify-between">
@@ -401,12 +393,10 @@
 
                 <!-- PORTAL 04: Protiva Store -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <!-- Image -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
                         <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">ECOMMERCE_UI</div>
                     </div>
-                    <!-- Details -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Protiva Store</h3>
@@ -424,8 +414,7 @@
                                 <li><span class="text-matrix-500">></span> Vanilla JavaScript handling DOM state & cart.</li>
                             </ul>
                         </div>
-                        <!-- Terminal Box -->
-                        <div class="mt-auto pt-2">
+                        <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="mb-1 flex justify-between">
@@ -443,16 +432,18 @@
 
                 <!-- PORTAL 05: DevStream -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <!-- Image -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
                         <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LMS_PLATFORM</div>
                     </div>
-                    <!-- Details -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">DevStream</h3>
                             <p class="text-sm text-slate-400 leading-relaxed mb-3">Architected the frontend for a student learning management system with a premium dark-mode SaaS aesthetic.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Vite React</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
+                            </div>
                         </div>
                         <div>
                             <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
@@ -462,8 +453,7 @@
                                 <li><span class="text-cyan-500">></span> Backend database schemas mapped to MongoDB.</li>
                             </ul>
                         </div>
-                        <!-- Terminal Box -->
-                        <div class="mt-auto pt-2">
+                        <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="mb-1 flex justify-between">
@@ -485,12 +475,10 @@
 
                 <!-- PORTAL 06: Pro Code Editor -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <!-- Image -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
                         <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">LOCAL_CLIENT</div>
                     </div>
-                    <!-- Details -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Pro Code Editor</h3>
@@ -508,8 +496,7 @@
                                 <li><span class="text-matrix-500">></span> xterm.js to pipe real-time bash I/O.</li>
                             </ul>
                         </div>
-                        <!-- Terminal Box -->
-                        <div class="mt-auto pt-2">
+                        <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> DEPLOYMENT_COMMANDS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="text-slate-500 mb-1">// Clone and run locally:</div>
@@ -524,28 +511,30 @@
                 </div>
 
                 <!-- PORTAL 07: Enterprise Telemetry Engine -->
-                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <!-- Image -->
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full xl:col-start-2">
+                    <!-- Note: xl:col-start-2 centers the 7th item in a 3-column grid layout -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">SYS_MONITOR</div>
                     </div>
-                    <!-- Details -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Enterprise Telemetry Engine</h3>
                             <p class="text-sm text-slate-400 leading-relaxed mb-3">A high-performance desktop system monitor tracking real-time CPU, RAM, GPU, thermal sensors, and network latency.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Electron</span>
+                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Chart.js</span>
+                            </div>
                         </div>
                         <div>
                             <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
                             <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
                                 <li><span class="text-cyan-500">></span> Electron IPC channels bridge UI and OS data.</li>
-                                <li><span class="text-cyan-500">></span> Systeminformation library extracts raw telemetry.</li>
+                                <li><span class="text-cyan-500">></span> Systeminformation lib extracts raw telemetry.</li>
                                 <li><span class="text-cyan-500">></span> Chart.js renders fluid performance graphs.</li>
                             </ul>
                         </div>
-                        <!-- Terminal Box -->
-                        <div class="mt-auto pt-2">
+                        <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="text-slate-500 mb-1">// Source Code:</div>
