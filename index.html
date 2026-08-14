@@ -79,6 +79,7 @@
             text-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
         }
 
+        /* Standard Vertical Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -91,6 +92,21 @@
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #22c55e;
+        }
+
+        /* Custom Horizontal Scrollbar for Image Gallery */
+        .cyber-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .cyber-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .cyber-scrollbar::-webkit-scrollbar-thumb {
+            background: #1b263b;
+            border-radius: 2px;
+        }
+        .cyber-scrollbar:hover::-webkit-scrollbar-thumb {
+            background: #00f0ff; /* Glows cyan when hovering over images */
         }
 
         .matrix-bg {
@@ -270,12 +286,32 @@
             <!-- CSS Grid Container (3 columns on XL screens) -->
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 
-                <!-- PORTAL 01: College Management Portal -->
+                <!-- PORTAL 01: College Management Portal (EXAMPLE OF 3 IMAGES) -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    
+                    <!-- Multi-Image Gallery Container -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="College Portal UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LIVE_FEED_01</div>
+                        <!-- Scrollable Image Track (Flex row) -->
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <!-- Image 1 -->
+                            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="UI 1" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                            <!-- Image 2 -->
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="UI 2" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                            <!-- Image 3 -->
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="UI 3" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        </div>
+                        
+                        <!-- Top Right HUD Label -->
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">
+                            LIVE_FEED_01
+                        </div>
+                        
+                        <!-- Bottom Scroll Indicator (Shows if you have multiple images) -->
+                        <div class="absolute bottom-3 right-3 bg-black/60 px-2 py-1 text-[9px] text-slate-300 font-mono rounded backdrop-blur pointer-events-none border border-slate-700 animate-pulse">
+                            SCROLL ➔
+                        </div>
                     </div>
+                    <!-- Details section below... -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">College Management System</h3>
@@ -314,12 +350,21 @@
                     </div>
                 </div>
 
-                <!-- PORTAL 02: Nexus CLI -->
+                <!-- PORTAL 02: Nexus CLI (EXAMPLE OF 2 IMAGES) -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    
+                    <!-- Multi-Image Gallery Container -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800" alt="CLI Terminal" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">NPM_PACKAGE</div>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <!-- Image 1 -->
+                            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800" alt="CLI 1" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                            <!-- Image 2 -->
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="CLI 2" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">NPM_PACKAGE</div>
+                        <div class="absolute bottom-3 right-3 bg-black/60 px-2 py-1 text-[9px] text-slate-300 font-mono rounded backdrop-blur pointer-events-none border border-slate-700 animate-pulse">SCROLL ➔</div>
                     </div>
+
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Nexus CLI Scaffolder</h3>
@@ -352,12 +397,18 @@
                     </div>
                 </div>
 
-                <!-- PORTAL 03: Nexus Workspace -->
+                <!-- PORTAL 03: Nexus Workspace (EXAMPLE OF 1 IMAGE) -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    
+                    <!-- Single Image Container -->
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">REAL_TIME_NODE</div>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <!-- Sirf 1 Image hai yahan, koi scroll nahi hoga -->
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">REAL_TIME_NODE</div>
                     </div>
+
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Nexus Collab Workspace</h3>
@@ -394,8 +445,10 @@
                 <!-- PORTAL 04: Protiva Store -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">ECOMMERCE_UI</div>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">ECOMMERCE_UI</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
@@ -433,8 +486,10 @@
                 <!-- PORTAL 05: DevStream -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">LMS_PLATFORM</div>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">LMS_PLATFORM</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
@@ -476,8 +531,10 @@
                 <!-- PORTAL 06: Pro Code Editor -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm">LOCAL_CLIENT</div>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">LOCAL_CLIENT</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
@@ -513,8 +570,10 @@
                 <!-- PORTAL 07: Enterprise Telemetry Engine -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full xl:col-start-2">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm">SYS_MONITOR</div>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">SYS_MONITOR</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
