@@ -79,7 +79,6 @@
             text-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
         }
 
-        /* Standard Vertical Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -94,20 +93,18 @@
             background: #22c55e;
         }
 
-        /* Custom Horizontal Scrollbar for Image Gallery */
         .cyber-scrollbar::-webkit-scrollbar {
-            height: 0px; /* Hidden scrollbar height */
+            height: 0px;
         }
         .cyber-scrollbar {
-            scrollbar-width: none; /* For Firefox */
-            -ms-overflow-style: none;  /* For IE/Edge */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
         .matrix-bg {
             background-image: linear-gradient(rgba(1, 4, 9, 0.94), rgba(1, 4, 9, 0.94));
         }
 
-        /* Glitch Animation on Hover */
         .glitch-hover:hover {
             animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both;
         }
@@ -121,7 +118,6 @@
             100% { transform: translate(0) }
         }
 
-        /* Toast Notification Styling */
         #toast {
             visibility: hidden;
             min-width: 260px;
@@ -155,17 +151,14 @@
 </head>
 <body class="bg-cyber-dark text-slate-400 font-sans antialiased selection:bg-matrix-500 selection:text-black matrix-bg">
 
-    <!-- Scanline Overlay -->
     <div class="fixed inset-0 pointer-events-none z-50 scanline opacity-25"></div>
     <div class="fixed inset-0 pointer-events-none z-40 bg-[linear-gradient(to_right,#1b263b20_1px,transparent_1px),linear-gradient(to_bottom,#1b263b20_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
 
-    <!-- System Notification Toast -->
     <div id="toast">[SYS_NOTIFY] Operation executed successfully.</div>
 
-    <!-- Main Wrapper -->
     <div class="w-full px-4 md:px-10 lg:px-16 xl:px-20 py-10 relative z-10">
 
-        <!-- Top Header Navigation HUD -->
+        <!-- Header -->
         <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-cyber-card border border-cyber-border rounded-lg p-4 mb-8 font-mono text-xs gap-4 shadow-2xl backdrop-blur-md">
             <div class="flex items-center space-x-3">
                 <span class="relative flex h-3 w-3">
@@ -188,7 +181,7 @@
             </div>
         </header>
 
-        <!-- Centered Hero Section -->
+        <!-- Hero Section -->
         <section class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-8 md:p-14 mb-8 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center text-center">
             <div class="absolute -right-20 -top-20 w-80 h-80 bg-matrix-500/10 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -218,7 +211,7 @@
             </div>
         </section>
 
-        <!-- Grid Container for About & Tech Stack -->
+        <!-- About & Tech Stack -->
         <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-8 mb-8">
             <div class="cyber-border md:col-span-2 xl:col-span-2 bg-cyber-card border border-cyber-border rounded-xl p-6 flex flex-col justify-between shadow-xl">
                 <div>
@@ -260,7 +253,7 @@
             </div>
         </div>
 
-        <!-- Active Portals & Access Nodes -->
+        <!-- Active Portals & Access Nodes (All 7 Projects Included) -->
         <section id="portals" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
                 <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
@@ -271,74 +264,48 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 
-                <!-- ========================================== -->
-                <!-- PORTAL 01: College Management Portal       -->
-                <!-- ========================================== -->
+                <!-- PORTAL 01: College Management Portal -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
-                        
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <!-- ✅ SAHI TARIKA: Local folder path diya gaya hai -->
-                            <img src="./images/college1.png" alt="Portal Image 1" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                            <img src="./images/college2.png" alt="Portal Image 2" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="./images/college1.png" alt="Portal Image" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Add+college1.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="./images/college2.png" alt="Portal Image" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Add+college2.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
-
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">LIVE_FEED_01</div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">LIVE_FEED</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">College Management System</h3>
                             <p class="text-sm text-slate-400 leading-relaxed mb-3">A centralized hub for students and faculty to manage academic records, assignments, and real-time notices.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                            </div>
                         </div>
                         <div class="mt-auto pt-4">
-                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="flex justify-between">
-                                    <span class="text-slate-500">ENDPOINT:</span> 
-                                    <a href="https://collage-portal-ohc0.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
-                                </div>
+                                <div class="flex justify-between"><span class="text-slate-500">ENDPOINT:</span> <a href="https://collage-portal-ohc0.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ========================================== -->
-                <!-- PORTAL 02: Nexus CLI                       -->
-                <!-- ========================================== -->
+                <!-- PORTAL 02: Nexus CLI Scaffolder -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
                         <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
-                        
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <!-- ✅ Yahan `NPMSS.png` use hua hai! -->
-                            <img src="./images/NPMSS.png" alt="CLI Image 1" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="./images/NPMSS.png" alt="CLI Image" onerror="this.src='https://placehold.co/800x450/060a12/22c55e?text=Add+NPMSS.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
-
                         <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">NPM_PACKAGE</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Nexus CLI Scaffolder</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A time-saving tool for developers that instantly sets up project architecture.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Node.js</span>
-                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A time-saving tool for developers that instantly sets up project architecture and folder structures.</p>
                         </div>
                         <div class="mt-auto pt-4">
-                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> DEPLOYMENT_COMMANDS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="text-slate-500 mb-1">// Install globally via NPM:</div>
-                                <div class="mb-2 text-cyan-400 select-all">$ npm i -g @glitchedranjan/nexus-cli</div>
-                                <div class="text-center">
-                                    <a href="https://www.npmjs.com/package/@glitchedranjan/nexus-cli" target="_blank" class="text-cyan-400 hover:underline">View on NPM ↗</a>
-                                </div>
+                                <div class="text-matrix-400 select-all">$ npm i -g @glitchedranjan/nexus-cli</div>
                             </div>
                         </div>
                     </div>
@@ -349,10 +316,10 @@
                     <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
                         <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <img src="./images/workspace1.png" alt="Workspace UI" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="./images/workspace.png" alt="Workspace" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Add+workspace.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">REAL_TIME_NODE</div>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">REAL_TIME</div>
                     </div>
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
@@ -360,12 +327,100 @@
                             <p class="text-sm text-slate-400 leading-relaxed mb-3">A live workspace app enabling seamless team chat and communication with secure session management.</p>
                         </div>
                         <div class="mt-auto pt-4">
-                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="flex justify-between">
-                                    <span class="text-slate-500">ENDPOINT:</span> 
-                                    <a href="https://nexus-real-time-developer-workspace.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
-                                </div>
+                                <div class="flex justify-between"><span class="text-slate-500">ENDPOINT:</span> <a href="https://nexus-real-time-developer-workspace.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 04: Protiva Store -->
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="./images/protiva.png" alt="Protiva Store" onerror="this.src='https://placehold.co/800x450/060a12/22c55e?text=Add+protiva.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">ECOMMERCE</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 gap-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Protiva Store</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A responsive single-page digital storefront engineered to showcase products with smooth browsing layout.</p>
+                        </div>
+                        <div class="mt-auto pt-4">
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="flex justify-between"><span class="text-slate-500">ENDPOINT:</span> <a href="https://protiva-store.vercel.app/" target="_blank" class="text-matrix-400 hover:underline">View ↗</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 05: DevStream -->
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="./images/devstream.png" alt="DevStream" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Add+devstream.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">LMS_PLATFORM</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 gap-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">DevStream</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Student learning management system with a dark-mode SaaS aesthetic and notice board integrations.</p>
+                        </div>
+                        <div class="mt-auto pt-4">
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="flex justify-between"><span class="text-slate-500">ENDPOINT:</span> <a href="https://devstream-ui.netlify.app/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 06: Pro Code Editor -->
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="./images/editor.png" alt="Code Editor" onerror="this.src='https://placehold.co/800x450/060a12/22c55e?text=Add+editor.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">DESKTOP_APP</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 gap-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Pro Code Editor</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Futuristic desktop code editor built with Electron, Monaco Editor, and integrated xterm.js terminal.</p>
+                        </div>
+                        <div class="mt-auto pt-4">
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="flex justify-between"><span class="text-slate-500">BUILD:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor---Hacker-Edition/releases" target="_blank" class="text-matrix-400 hover:underline">Releases ↗</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTAL 07: Enterprise Telemetry Engine -->
+                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full xl:col-start-2">
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
+                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
+                            <img src="./images/telemetry.png" alt="Telemetry" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Add+telemetry.png+to+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">SYS_MONITOR</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 gap-4">
+                        <div>
+                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Enterprise Telemetry Engine</h3>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">High-performance desktop system monitor tracking real-time CPU, RAM, GPU, and thermal sensors.</p>
+                        </div>
+                        <div class="mt-auto pt-4">
+                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
+                                <div class="flex justify-between"><span class="text-slate-500">BUILD:</span> <a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine/releases" target="_blank" class="text-cyan-400 hover:underline">Releases ↗</a></div>
                             </div>
                         </div>
                     </div>
@@ -374,21 +429,176 @@
             </div>
         </section>
 
-        <!-- Script Utilities -->
-        <script>
-            // Image Gallery Scroll Function
-            function scrollGallery(button, direction) {
-                const container = button.closest('.relative');
-                const track = container.querySelector('.cyber-scrollbar');
-                if (track) {
-                    const scrollAmount = track.clientWidth;
-                    track.scrollBy({
-                        left: direction * scrollAmount,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        </script>
+        <!-- Terminal & Contact Section -->
+        <section class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
+                <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
+                    <span class="text-matrix-400">#</span> Interactive Sub-System Shell
+                </h2>
+                <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                    <button onclick="runQuickCommand('help')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">help</button>
+                    <button onclick="runQuickCommand('skills')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">skills</button>
+                    <button onclick="runQuickCommand('portals')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">portals</button>
+                    <button onclick="runQuickCommand('matrix')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">matrix</button>
+                    <button onclick="runQuickCommand('clear')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-red-400 hover:text-red-300 rounded">clear</button>
+                </div>
+            </div>
+            
+            <div class="bg-black border border-cyber-border rounded-lg font-mono text-xs overflow-hidden shadow-2xl">
+                <div class="bg-slate-900 px-4 py-2 border-b border-cyber-border flex justify-between items-center text-slate-400">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block cursor-pointer" onclick="clearTerminal()" title="Clear"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80 inline-block"></span>
+                        <span class="ml-2 text-slate-300 text-[11px]">bash - prchaki@core-node:~</span>
+                    </span>
+                    <span class="text-[10px] text-matrix-400 tracking-widest font-bold">SECURE_SHELL v4.2</span>
+                </div>
+                
+                <div class="p-4 max-h-56 overflow-y-auto space-y-2 text-slate-300 font-mono" id="terminal-output">
+                    <div>Type <span class="text-cyan-400 font-bold">'help'</span> to query available kernel instruction flags, or click the quick command pills above.</div>
+                </div>
+
+                <div class="flex items-center px-4 py-3 bg-slate-950/80 border-t border-cyber-border">
+                    <span class="text-matrix-400 mr-2 font-bold">root@prchaki:~#</span>
+                    <input type="text" id="terminal-input" class="bg-transparent border-none outline-none text-slate-100 font-mono text-xs w-full focus:ring-0" autofocus autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
+            <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider mb-4 flex items-center gap-2">
+                <span class="text-matrix-400">#</span> Secure Transmission Channels & Direct Ping
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4 font-mono text-xs">
+                    <div>
+                        <label class="block text-slate-300 mb-1">YOUR_IDENTIFIER // NAME</label>
+                        <input type="text" id="sender-name" required class="w-full bg-cyber-dark border border-cyber-border rounded px-3 py-2 text-slate-200 focus:border-matrix-500 outline-none transition-colors" placeholder="e.g. Agent Smith">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 mb-1">RETURN_ENDPOINT // EMAIL</label>
+                        <input type="email" id="sender-email" required class="w-full bg-cyber-dark border border-cyber-border rounded px-3 py-2 text-slate-200 focus:border-matrix-500 outline-none transition-colors" placeholder="e.g. smith@matrix.net">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 mb-1">PAYLOAD // MESSAGE</label>
+                        <textarea id="sender-message" required rows="3" class="w-full bg-cyber-dark border border-cyber-border rounded px-3 py-2 text-slate-200 focus:border-matrix-500 outline-none transition-colors resize-none" placeholder="Enter transmission notes..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-2.5 bg-matrix-950 border border-matrix-500 text-matrix-400 rounded hover:bg-matrix-900/50 transition-all font-bold tracking-wider flex items-center justify-center gap-2 shadow">
+                        <span>🚀</span> TRANSMIT_PAYLOAD
+                    </button>
+                </form>
+
+                <div class="flex flex-col justify-between space-y-4 font-mono text-xs">
+                    <div class="space-y-3">
+                        <div class="text-slate-300 font-semibold mb-2">DIRECT ENDPOINT PROTOCOLS:</div>
+                        <div class="flex items-center justify-between bg-cyber-dark border border-cyber-border p-3 rounded">
+                            <span class="text-cyan-400 truncate mr-2">priyaranjanchaki9@gmail.com</span>
+                            <button onclick="copyToClipboard('priyaranjanchaki9@gmail.com', 'Email copied!')" class="px-2.5 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-cyan-400 rounded transition-colors shrink-0">📋 COPY</button>
+                        </div>
+                        <div class="flex items-center justify-between bg-cyber-dark border border-cyber-border p-3 rounded">
+                            <span class="text-slate-300 truncate mr-2">github.com/PRIYA-RANJAN-CHAKI</span>
+                            <a href="https://github.com/PRIYA-RANJAN-CHAKI" target="_blank" class="px-2.5 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-matrix-400 rounded transition-colors shrink-0">↗ OPEN</a>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-black/40 border border-cyber-border rounded text-slate-500 text-[11px]">
+                        // ENCRYPTION PROTOCOL: RSA-4096 BIT SECURED ENDPOINT. ZERO LOGS KEPT.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center font-mono text-xs text-slate-600 py-4 border-t border-cyber-border/40">
+            // EOF. ARCHITECTED & MAINTAINED BY PRIYA RANJAN CHAKI [2026]
+        </footer>
+
     </div>
+
+    <!-- Script Utilities -->
+    <script>
+        function scrollGallery(button, direction) {
+            const container = button.closest('.relative');
+            const track = container.querySelector('.cyber-scrollbar');
+            if (track) {
+                const scrollAmount = track.clientWidth;
+                track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toISOString().substr(11, 8);
+            const clockEl = document.getElementById('utc-clock');
+            if (clockEl) clockEl.textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = "show";
+            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
+        function copyToClipboard(text, msg) {
+            navigator.clipboard.writeText(text).then(() => showToast(`[SUCCESS] ${msg}`));
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('sender-name').value;
+            showToast(`[TRANSMIT] Sent successfully from ${name}!`);
+            document.getElementById('contact-form').reset();
+        }
+
+        const inputField = document.getElementById('terminal-input');
+        const outputArea = document.getElementById('terminal-output');
+
+        if (inputField && outputArea) {
+            inputField.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    const command = inputField.value.trim().toLowerCase();
+                    printToTerminal(`root@prchaki:~# ${inputField.value}`);
+                    handleCommand(command);
+                    inputField.value = '';
+                    outputArea.scrollTop = outputArea.scrollHeight;
+                }
+            });
+        }
+
+        function runQuickCommand(cmd) {
+            printToTerminal(`root@prchaki:~# ${cmd}`);
+            handleCommand(cmd);
+            outputArea.scrollTop = outputArea.scrollHeight;
+        }
+
+        function printToTerminal(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            outputArea.appendChild(div);
+        }
+
+        function clearTerminal() {
+            outputArea.innerHTML = '';
+            showToast('[SHELL] Cleared.');
+        }
+
+        function handleCommand(cmd) {
+            switch(cmd) {
+                case 'help': printToTerminal("Flags: [about, skills, portals, contact, status, matrix, clear]"); break;
+                case 'about': printToTerminal("Priya Ranjan Chaki - CSE student focused on secure systems & full-stack."); break;
+                case 'skills': printToTerminal("Core: Python, C, JavaScript, MERN Stack, Node.js, Linux, Git."); break;
+                case 'portals': printToTerminal("Loaded All 7 Active Portals Successfully."); break;
+                case 'contact': printToTerminal("Email: priyaranjanchaki9@gmail.com | GitHub: PRIYA-RANJAN-CHAKI"); break;
+                case 'status': printToTerminal("All systems nominal. Security checksum 100%."); break;
+                case 'matrix': printToTerminal("Wake up, Neo... Follow the white rabbit. 🐇"); break;
+                case 'clear': outputArea.innerHTML = ''; break;
+                default: printToTerminal(`Unknown: '${cmd}'. Type 'help'.`);
+            }
+        }
+    </script>
 </body>
 </html>
