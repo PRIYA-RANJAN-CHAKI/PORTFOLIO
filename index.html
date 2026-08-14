@@ -96,11 +96,11 @@
 
         /* Custom Horizontal Scrollbar for Image Gallery */
         .cyber-scrollbar::-webkit-scrollbar {
-            height: 0px; /* Hidden scrollbar height since we have arrows now */
+            height: 0px; /* Hidden scrollbar height */
         }
         .cyber-scrollbar {
             scrollbar-width: none; /* For Firefox */
-            -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+            -ms-overflow-style: none;  /* For IE/Edge */
         }
 
         .matrix-bg {
@@ -155,14 +155,14 @@
 </head>
 <body class="bg-cyber-dark text-slate-400 font-sans antialiased selection:bg-matrix-500 selection:text-black matrix-bg">
 
-    <!-- Scanline & Cyber Grid Overlay Effects -->
+    <!-- Scanline Overlay -->
     <div class="fixed inset-0 pointer-events-none z-50 scanline opacity-25"></div>
     <div class="fixed inset-0 pointer-events-none z-40 bg-[linear-gradient(to_right,#1b263b20_1px,transparent_1px),linear-gradient(to_bottom,#1b263b20_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
 
     <!-- System Notification Toast -->
     <div id="toast">[SYS_NOTIFY] Operation executed successfully.</div>
 
-    <!-- Main Wrapper (Full-Width Responsive Container) -->
+    <!-- Main Wrapper -->
     <div class="w-full px-4 md:px-10 lg:px-16 xl:px-20 py-10 relative z-10">
 
         <!-- Top Header Navigation HUD -->
@@ -220,7 +220,6 @@
 
         <!-- Grid Container for About & Tech Stack -->
         <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-5 gap-8 mb-8">
-            <!-- About Profile -->
             <div class="cyber-border md:col-span-2 xl:col-span-2 bg-cyber-card border border-cyber-border rounded-xl p-6 flex flex-col justify-between shadow-xl">
                 <div>
                     <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider mb-4 flex items-center gap-2">
@@ -236,32 +235,25 @@
                 </div>
             </div>
 
-            <!-- Tech Stack Matrix -->
             <div class="cyber-border md:col-span-2 xl:col-span-3 bg-cyber-card border border-cyber-border rounded-xl p-6 shadow-xl">
                 <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider mb-6 flex items-center gap-2">
                     <span class="text-matrix-400">#</span> Core Competencies
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 font-mono text-xs">
                     <div class="p-4 rounded-lg bg-cyber-dark/80 border border-cyber-border hover:border-cyan-500/40 transition-colors">
-                        <div class="text-cyan-400 font-semibold mb-2 flex items-center gap-1.5">
-                            <span>◇</span> Languages & Logic
-                        </div>
+                        <div class="text-cyan-400 font-semibold mb-2 flex items-center gap-1.5"><span>◇</span> Languages & Logic</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">Python</span>
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">C</span>
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">JavaScript (ES6+)</span>
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-cyan-500 transition-colors">HTML5/CSS3</span>
+                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300">C</span>
+                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300">JavaScript (ES6+)</span>
                         </div>
                     </div>
                     <div class="p-4 rounded-lg bg-cyber-dark/80 border border-cyber-border hover:border-matrix-500/40 transition-colors">
-                        <div class="text-matrix-400 font-semibold mb-2 flex items-center gap-1.5">
-                            <span>◆</span> Frameworks & Infrastructure
-                        </div>
+                        <div class="text-matrix-400 font-semibold mb-2 flex items-center gap-1.5"><span>◆</span> Frameworks & Infrastructure</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-matrix-500 transition-colors">MERN Stack</span>
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-matrix-500 transition-colors">Node.js</span>
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-matrix-500 transition-colors">Git / CLI</span>
-                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300 hover:border-matrix-500 transition-colors">Linux</span>
+                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300">MERN Stack</span>
+                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300">Node.js</span>
+                            <span class="px-2.5 py-1 bg-slate-900 border border-slate-800 rounded text-slate-300">Git / CLI</span>
                         </div>
                     </div>
                 </div>
@@ -277,130 +269,74 @@
                 <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-500/30">GRID_VIEW_ENABLED</span>
             </div>
 
-            <!-- CSS Grid Container (3 columns on XL screens) -->
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 
-                <!-- PORTAL 01: College Management Portal (WITH ARROWS) -->
+                <!-- ========================================== -->
+                <!-- PORTAL 01: College Management Portal       -->
+                <!-- ========================================== -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    
-                    <!-- Multi-Image Gallery Container -->
-                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
                         
-                        <!-- Left Navigation Arrow -->
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-                            &#10094;
-                        </button>
-
-                        <!-- Scrollable Image Track -->
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <!-- Image 1 -->
-                            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800" alt="UI 1" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                            <!-- Image 2 -->
-                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="UI 2" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                            <!-- Image 3 -->
-                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="UI 3" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                            <!-- ✅ SAHI TARIKA: Local folder path diya gaya hai -->
+                            <img src="./images/college1.png" alt="Portal Image 1" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                            <img src="./images/college2.png" alt="Portal Image 2" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
 
-                        <!-- Right Navigation Arrow -->
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-                            &#10095;
-                        </button>
-                        
-                        <!-- Top Right HUD Label -->
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">
-                            LIVE_FEED_01
-                        </div>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
+                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">LIVE_FEED_01</div>
                     </div>
-                    <!-- Details section below... -->
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">College Management System</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A centralized hub for students and faculty to manage academic records, assignments, and real-time notices without friction.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A centralized hub for students and faculty to manage academic records, assignments, and real-time notices.</p>
                             <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Node.js</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
                             </div>
-                        </div>
-                        <div>
-                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-cyan-500">></span> Role-based auth (Admin/Faculty/Student) via JWT.</li>
-                                <li><span class="text-cyan-500">></span> Automated attendance tracking pushed to cluster.</li>
-                                <li><span class="text-cyan-500">></span> Real-time notice broadcasting via REST APIs.</li>
-                            </ul>
                         </div>
                         <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex justify-between">
+                                <div class="flex justify-between">
                                     <span class="text-slate-500">ENDPOINT:</span> 
                                     <a href="https://collage-portal-ohc0.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
-                                </div>
-                                <div class="mb-1 flex justify-between">
-                                    <span class="text-slate-500">FRONTEND:</span> 
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/frontend" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-slate-500">BACKEND:</span> 
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/backend" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PORTAL 02: Nexus CLI (WITH ARROWS) -->
+                <!-- ========================================== -->
+                <!-- PORTAL 02: Nexus CLI                       -->
+                <!-- ========================================== -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    
-                    <!-- Multi-Image Gallery Container -->
-                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
                         
-                        <!-- Left Navigation Arrow -->
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-                            &#10094;
-                        </button>
-
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <!-- Image 1 -->
-                            <img src="https://ibb.co/SD2T52yt" alt="NPMSS">
-                            <!-- Image 2 -->
-                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="CLI 2" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                            <!-- ✅ Yahan `NPMSS.png` use hua hai! -->
+                            <img src="./images/NPMSS.png" alt="CLI Image 1" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
 
-                        <!-- Right Navigation Arrow -->
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-                            &#10095;
-                        </button>
-
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">NPM_PACKAGE</div>
                     </div>
-
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Nexus CLI Scaffolder</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A time-saving tool for developers that instantly sets up project architecture, configures folders, and streamlines workspace setups.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A time-saving tool for developers that instantly sets up project architecture.</p>
                             <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
                                 <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Node.js</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Commander.js</span>
                             </div>
-                        </div>
-                        <div>
-                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ARCHITECTURE</h4>
-                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-matrix-500">></span> Built with Node.js to parse CLI arguments.</li>
-                                <li><span class="text-matrix-500">></span> Automated fs operations to build templates.</li>
-                                <li><span class="text-matrix-500">></span> Published globally to the NPM registry.</li>
-                            </ul>
                         </div>
                         <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> DEPLOYMENT_COMMANDS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
                                 <div class="text-slate-500 mb-1">// Install globally via NPM:</div>
                                 <div class="mb-2 text-cyan-400 select-all">$ npm i -g @glitchedranjan/nexus-cli</div>
-                                <div class="text-slate-500 mb-1">// Execute package:</div>
-                                <div class="mb-1 text-matrix-400 select-all">$ nexus init</div>
-                                <div class="mt-2 pt-2 border-t border-cyber-border text-center">
+                                <div class="text-center">
                                     <a href="https://www.npmjs.com/package/@glitchedranjan/nexus-cli" target="_blank" class="text-cyan-400 hover:underline">View on NPM ↗</a>
                                 </div>
                             </div>
@@ -410,215 +346,26 @@
 
                 <!-- PORTAL 03: Nexus Workspace -->
                 <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    
-                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
+                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0 bg-[#060a12]">
+                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10094;</button>
                         <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Workspace UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+                            <img src="./images/workspace1.png" alt="Workspace UI" onerror="this.src='https://placehold.co/800x450/060a12/4ade80?text=Image+Not+Found+in+/images/'" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                         </div>
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
+                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100">&#10095;</button>
                         <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">REAL_TIME_NODE</div>
                     </div>
-
                     <div class="p-5 flex flex-col flex-1 gap-4">
                         <div>
                             <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Nexus Collab Workspace</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A live workspace app enabling seamless team chat and communication with secure session management and reliable history storage.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">React</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Socket.io</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-cyan-500">></span> WebSockets integrated for zero-latency messaging.</li>
-                                <li><span class="text-cyan-500">></span> Express backend handling data persistence.</li>
-                                <li><span class="text-cyan-500">></span> Component-based React architecture for UI.</li>
-                            </ul>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A live workspace app enabling seamless team chat and communication with secure session management.</p>
                         </div>
                         <div class="mt-auto pt-4">
                             <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
                             <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex justify-between">
+                                <div class="flex justify-between">
                                     <span class="text-slate-500">ENDPOINT:</span> 
                                     <a href="https://nexus-real-time-developer-workspace.onrender.com/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
                                 </div>
-                                <div class="flex justify-between">
-                                    <span class="text-slate-500">SOURCE:</span> 
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/-Nexus-Real-Time-Developer-Workspace" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PORTAL 04: Protiva Store -->
-                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
-                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800" alt="Store UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        </div>
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">ECOMMERCE_UI</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1 gap-4">
-                        <div>
-                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Protiva Store</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A responsive single-page digital storefront engineered to showcase products cleanly with a smooth browsing layout.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">HTML/CSS</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Vanilla JS</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ARCHITECTURE</h4>
-                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-matrix-500">></span> Native HTML5 semantic structure for SEO.</li>
-                                <li><span class="text-matrix-500">></span> CSS3 Grid/Flexbox for perfect breakpoints.</li>
-                                <li><span class="text-matrix-500">></span> Vanilla JavaScript handling DOM state & cart.</li>
-                            </ul>
-                        </div>
-                        <div class="mt-auto pt-4">
-                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
-                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex justify-between">
-                                    <span class="text-slate-500">ENDPOINT:</span> 
-                                    <a href="https://protiva-store.vercel.app/" target="_blank" class="text-matrix-400 hover:underline">View Store ↗</a>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-slate-500">SOURCE:</span> 
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/Protiva-Store" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PORTAL 05: DevStream -->
-                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
-                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="DevStream UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        </div>
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">LMS_PLATFORM</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1 gap-4">
-                        <div>
-                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">DevStream</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Architected the frontend for a student learning management system with a premium dark-mode SaaS aesthetic.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Vite React</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">MongoDB</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-cyan-500">></span> Accelerated frontend tooling configured via Vite.</li>
-                                <li><span class="text-cyan-500">></span> Complex UI states managed seamlessly with React.js.</li>
-                                <li><span class="text-cyan-500">></span> Backend database schemas mapped to MongoDB.</li>
-                            </ul>
-                        </div>
-                        <div class="mt-auto pt-4">
-                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
-                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="mb-1 flex justify-between">
-                                    <span class="text-slate-500">ENDPOINT:</span> 
-                                    <a href="https://devstream-ui.netlify.app/" target="_blank" class="text-matrix-400 hover:underline">Launch ↗</a>
-                                </div>
-                                <div class="mb-1 flex justify-between">
-                                    <span class="text-slate-500">FRONTEND:</span> 
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-frontend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span class="text-slate-500">BACKEND:</span> 
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/devstream-ui-backend.git" target="_blank" class="text-cyan-400 hover:underline">GitHub ↗</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PORTAL 06: Pro Code Editor -->
-                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-matrix-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full">
-                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
-                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800" alt="Code Editor UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        </div>
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-matrix-400 hover:border-matrix-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-matrix-400 font-mono border border-matrix-500/30 rounded backdrop-blur-sm pointer-events-none">LOCAL_CLIENT</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1 gap-4">
-                        <div>
-                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-matrix-400 transition-colors mb-2">Pro Code Editor</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A high-performance local IDE built for speed and cyberpunk aesthetics, featuring syntax highlighting and an integrated terminal.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Electron.js</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-matrix-400 rounded">Monaco</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ARCHITECTURE</h4>
-                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-matrix-500">></span> Electron.js core for desktop compilation.</li>
-                                <li><span class="text-matrix-500">></span> Monaco Editor for VS Code syntax logic.</li>
-                                <li><span class="text-matrix-500">></span> xterm.js to pipe real-time bash I/O.</li>
-                            </ul>
-                        </div>
-                        <div class="mt-auto pt-4">
-                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> DEPLOYMENT_COMMANDS</h4>
-                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="text-slate-500 mb-1">// Clone and run locally:</div>
-                                <div class="mb-1 text-cyan-400 select-all truncate">$ git clone https://github.com/...</div>
-                                <div class="text-matrix-400 select-all">$ npm start</div>
-                                <div class="mt-2 pt-2 border-t border-cyber-border text-center">
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/My-Pro-Code-Editor---Hacker-Edition/releases/download/v1.0.0/my-editor-1.0.0.Setup.exe" class="text-cyan-400 hover:underline">Download .EXE File ↗</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PORTAL 07: Enterprise Telemetry Engine -->
-                <div class="bg-cyber-dark border border-cyber-border rounded-lg flex flex-col hover:border-cyan-500/50 transition-all duration-300 shadow-lg group overflow-hidden h-full xl:col-start-2">
-                    <div class="relative h-48 sm:h-56 w-full border-b border-cyber-border shrink-0">
-                        <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10094;</button>
-                        <div class="flex h-full w-full overflow-x-auto snap-x snap-mandatory cyber-scrollbar">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Telemetry UI" class="w-full h-full object-cover shrink-0 snap-center opacity-70 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
-                        </div>
-                        <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 border border-cyber-border text-slate-300 hover:text-cyan-400 hover:border-cyan-400 w-8 h-8 flex items-center justify-center rounded-full backdrop-blur z-10 transition-all opacity-60 hover:opacity-100 shadow-[0_0_10px_rgba(0,0,0,0.5)]">&#10095;</button>
-                        <div class="absolute top-3 right-3 bg-black/80 px-2 py-1 text-[10px] text-cyan-400 font-mono border border-cyan-500/30 rounded backdrop-blur-sm pointer-events-none">SYS_MONITOR</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1 gap-4">
-                        <div>
-                            <h3 class="font-mono text-lg font-semibold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">Enterprise Telemetry Engine</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-3">A high-performance desktop system monitor tracking real-time CPU, RAM, GPU, thermal sensors, and network latency.</p>
-                            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Electron</span>
-                                <span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-cyan-400 rounded">Chart.js</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-[11px] font-mono text-matrix-400 mb-2 border-b border-cyber-border pb-1">>> EXECUTION_PROCESS</h4>
-                            <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-                                <li><span class="text-cyan-500">></span> Electron IPC channels bridge UI and OS data.</li>
-                                <li><span class="text-cyan-500">></span> Systeminformation lib extracts raw telemetry.</li>
-                                <li><span class="text-cyan-500">></span> Chart.js renders fluid performance graphs.</li>
-                            </ul>
-                        </div>
-                        <div class="mt-auto pt-4">
-                            <h4 class="text-[11px] font-mono text-cyan-400 mb-2 border-b border-cyber-border pb-1">>> ACCESS_PARAMETERS</h4>
-                            <div class="bg-black border border-cyber-border rounded p-3 font-mono text-xs text-slate-300 shadow-inner">
-                                <div class="text-slate-500 mb-1">// Source Code:</div>
-                                <div class="mb-2 text-cyan-400 select-all truncate"><a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine.git" target="_blank" class="hover:underline">Github/Telemetry-Engine</a></div>
-                                <div class="mt-2 pt-2 border-t border-cyber-border text-center">
-                                    <a href="https://github.com/PRIYA-RANJAN-CHAKI/Telemetry-Engine/releases/download/v1.0.0/Telemetry.Engine-1.0.0.Setup.exe" class="text-matrix-400 hover:underline">Download App .EXE ↗</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -627,227 +374,21 @@
             </div>
         </section>
 
-        <!-- Interactive Terminal Sub-System -->
-        <section class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
-                <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider flex items-center gap-2">
-                    <span class="text-matrix-400">#</span> Interactive Sub-System Shell
-                </h2>
-                <!-- Quick Command Buttons -->
-                <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
-                    <button onclick="runQuickCommand('help')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">help</button>
-                    <button onclick="runQuickCommand('skills')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">skills</button>
-                    <button onclick="runQuickCommand('portals')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">portals</button>
-                    <button onclick="runQuickCommand('matrix')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-slate-300 hover:text-matrix-400 rounded">matrix</button>
-                    <button onclick="runQuickCommand('clear')" class="px-2 py-1 bg-slate-900 border border-cyber-border text-red-400 hover:text-red-300 rounded">clear</button>
-                </div>
-            </div>
-            
-            <div class="bg-black border border-cyber-border rounded-lg font-mono text-xs overflow-hidden shadow-2xl">
-                <div class="bg-slate-900 px-4 py-2 border-b border-cyber-border flex justify-between items-center text-slate-400">
-                    <span class="flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block cursor-pointer" onclick="clearTerminal()" title="Clear"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80 inline-block"></span>
-                        <span class="ml-2 text-slate-300 text-[11px]">bash - prchaki@core-node:~</span>
-                    </span>
-                    <span class="text-[10px] text-matrix-400 tracking-widest font-bold">SECURE_SHELL v4.2</span>
-                </div>
-                
-                <div class="p-4 max-h-56 overflow-y-auto space-y-2 text-slate-300 font-mono" id="terminal-output">
-                    <div>Type <span class="text-cyan-400 font-bold">'help'</span> to query available kernel instruction flags, or click the quick command pills above.</div>
-                </div>
-
-                <div class="flex items-center px-4 py-3 bg-slate-950/80 border-t border-cyber-border">
-                    <span class="text-matrix-400 mr-2 font-bold">root@prchaki:~#</span>
-                    <input type="text" id="terminal-input" class="bg-transparent border-none outline-none text-slate-100 font-mono text-xs w-full focus:ring-0" autofocus autocomplete="off" spellcheck="false">
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Secure Contact Form / Transmission Channels -->
-        <section id="contact" class="cyber-border bg-cyber-card border border-cyber-border rounded-xl p-6 md:p-8 mb-8 shadow-2xl">
-            <h2 class="font-mono text-sm text-slate-200 uppercase tracking-wider mb-4 flex items-center gap-2">
-                <span class="text-matrix-400">#</span> Secure Transmission Channels & Direct Ping
-            </h2>
-            <p class="text-sm text-slate-400 mb-6">
-                Ready to review specifications, talk architecture, or discuss collaboration? Send a secure transmission or connect via endpoints below:
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Contact Form Simulation -->
-                <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4 font-mono text-xs">
-                    <div>
-                        <label class="block text-slate-300 mb-1">YOUR_IDENTIFIER // NAME</label>
-                        <input type="text" id="sender-name" required class="w-full bg-cyber-dark border border-cyber-border rounded px-3 py-2 text-slate-200 focus:border-matrix-500 outline-none transition-colors" placeholder="e.g. Agent Smith">
-                    </div>
-                    <div>
-                        <label class="block text-slate-300 mb-1">RETURN_ENDPOINT // EMAIL</label>
-                        <input type="email" id="sender-email" required class="w-full bg-cyber-dark border border-cyber-border rounded px-3 py-2 text-slate-200 focus:border-matrix-500 outline-none transition-colors" placeholder="e.g. smith@matrix.net">
-                    </div>
-                    <div>
-                        <label class="block text-slate-300 mb-1">PAYLOAD // MESSAGE</label>
-                        <textarea id="sender-message" required rows="3" class="w-full bg-cyber-dark border border-cyber-border rounded px-3 py-2 text-slate-200 focus:border-matrix-500 outline-none transition-colors resize-none" placeholder="Enter transmission notes..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-2.5 bg-matrix-950 border border-matrix-500 text-matrix-400 rounded hover:bg-matrix-900/50 transition-all font-bold tracking-wider flex items-center justify-center gap-2 shadow">
-                        <span>🚀</span> TRANSMIT_PAYLOAD
-                    </button>
-                </form>
-
-                <!-- Direct Endpoints & Quick Copy -->
-                <div class="flex flex-col justify-between space-y-4 font-mono text-xs">
-                    <div class="space-y-3">
-                        <div class="text-slate-300 font-semibold mb-2">DIRECT ENDPOINT PROTOCOLS:</div>
-                        
-                        <div class="flex items-center justify-between bg-cyber-dark border border-cyber-border p-3 rounded">
-                            <span class="text-cyan-400 truncate mr-2">priyaranjanchaki9@gmail.com</span>
-                            <button onclick="copyToClipboard('priyaranjanchaki9@gmail.com', 'Email copied to clipboard!')" class="px-2.5 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-cyan-400 rounded transition-colors shrink-0">
-                                📋 COPY
-                            </button>
-                        </div>
-
-                        <div class="flex items-center justify-between bg-cyber-dark border border-cyber-border p-3 rounded">
-                            <span class="text-slate-300 truncate mr-2">github.com/PRIYA-RANJAN-CHAKI</span>
-                            <a href="https://github.com/PRIYA-RANJAN-CHAKI" target="_blank" class="px-2.5 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-matrix-400 rounded transition-colors shrink-0">
-                                ↗ OPEN
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="p-4 bg-black/40 border border-cyber-border rounded text-slate-500 text-[11px]">
-                        // ENCRYPTION PROTOCOL: RSA-4096 BIT SECURED ENDPOINT. ZERO LOGS KEPT ON INCOMING TRANSMISSIONS.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="text-center font-mono text-xs text-slate-600 py-4 border-t border-cyber-border/40">
-            // EOF. ARCHITECTED & MAINTAINED BY PRIYA RANJAN CHAKI [2026]
-        </footer>
-
-    </div>
-
-    <!-- Script Utilities -->
-    <script>
-        // Image Gallery Scroll Function
-        function scrollGallery(button, direction) {
-            // Container find karo
-            const container = button.closest('.relative');
-            const track = container.querySelector('.cyber-scrollbar');
-            
-            if (track) {
-                // Ek image ka width kitna hai utna hi scroll karo
-                const scrollAmount = track.clientWidth;
-                track.scrollBy({
-                    left: direction * scrollAmount,
-                    behavior: 'smooth' // Smooth sliding effect
-                });
-            }
-        }
-
-        // Live UTC Clock
-        function updateClock() {
-            const now = new Date();
-            const timeString = now.toISOString().substr(11, 8);
-            const clockEl = document.getElementById('utc-clock');
-            if (clockEl) {
-                clockEl.textContent = timeString;
-            }
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        // Toast Notification Trigger
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.className = "show";
-            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
-        }
-
-        // Copy to Clipboard Utility
-        function copyToClipboard(text, successMsg) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast(`[SYS_SUCCESS] ${successMsg}`);
-            }, () => {
-                showToast(`[SYS_ERROR] Failed to copy text.`);
-            });
-        }
-
-        // Simulated Contact Form Submit
-        function handleContactSubmit(event) {
-            event.preventDefault();
-            const name = document.getElementById('sender-name').value;
-            showToast(`[SYS_TRANSMIT] Secure payload sent successfully from ${name}!`);
-            document.getElementById('contact-form').reset();
-        }
-
-        // Terminal Interaction Logic
-        const inputField = document.getElementById('terminal-input');
-        const outputArea = document.getElementById('terminal-output');
-
-        if (inputField && outputArea) {
-            inputField.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
-                    const command = inputField.value.trim().toLowerCase();
-                    printToTerminal(`root@prchaki:~# ${inputField.value}`);
-                    handleCommand(command);
-                    inputField.value = '';
-                    outputArea.scrollTop = outputArea.scrollHeight;
+        <!-- Script Utilities -->
+        <script>
+            // Image Gallery Scroll Function
+            function scrollGallery(button, direction) {
+                const container = button.closest('.relative');
+                const track = container.querySelector('.cyber-scrollbar');
+                if (track) {
+                    const scrollAmount = track.clientWidth;
+                    track.scrollBy({
+                        left: direction * scrollAmount,
+                        behavior: 'smooth'
+                    });
                 }
-            });
-        }
-
-        function runQuickCommand(cmd) {
-            printToTerminal(`root@prchaki:~# ${cmd}`);
-            handleCommand(cmd);
-            outputArea.scrollTop = outputArea.scrollHeight;
-        }
-
-        function printToTerminal(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            outputArea.appendChild(div);
-        }
-
-        function clearTerminal() {
-            outputArea.innerHTML = '';
-            showToast('[SYS_SHELL] Terminal buffer cleared.');
-        }
-
-        function handleCommand(cmd) {
-            switch(cmd) {
-                case 'help':
-                    printToTerminal("Available flags: [about, skills, portals, contact, status, matrix, clear]");
-                    break;
-                case 'about':
-                    printToTerminal("Priya Ranjan Chaki - CSE student focused on secure systems, full-stack development, and architecture.");
-                    break;
-                case 'skills':
-                    printToTerminal("Core: Python, C, JavaScript, MERN Stack, Node.js, Linux, Git.");
-                    break;
-                case 'portals':
-                    printToTerminal("Loaded Active Portals: 1. College Mgmt, 2. Nexus CLI, 3. Nexus Workspace, 4. Protiva Store, 5. DevStream, 6. Pro Code Editor, 7. Telemetry Engine");
-                    break;
-                case 'contact':
-                    printToTerminal("Endpoints: priyaranjanchaki9@gmail.com | GitHub: PRIYA-RANJAN-CHAKI");
-                    break;
-                case 'status':
-                    printToTerminal("All systems nominal. Encryption layers active. Security checksum at 100%.");
-                    break;
-                case 'matrix':
-                    printToTerminal("Wake up, Neo... The matrix has you. Follow the white rabbit. 🐇");
-                    break;
-                case 'clear':
-                    outputArea.innerHTML = '';
-                    break;
-                case '':
-                    break;
-                default:
-                    printToTerminal(`Command unknown: '${cmd}'. Type 'help' for valid parameter flags.`);
             }
-        }
-    </script>
+        </script>
+    </div>
 </body>
 </html>
